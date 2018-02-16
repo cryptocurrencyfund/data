@@ -27,28 +27,22 @@ func main() {
 	seconds := os.Args[1]
 	fmt.Println("Getting price every " + seconds + " seconds")
 
-	// fetchPrices(db)
-	saveJSON(util.DateString())
+	top100 := fetchPrices(db)
+	saveJSON(util.DateString(), top100)
 }
 
-func fetchPrices(db *bolt.DB) {
+func fetchPrices(db *bolt.DB) []coinMarketCap.Coin {
 	// Get top 10 coins
-	top10, err := coinMarketCap.GetAllCoinDataSorted(10)
+	top100, err := coinMarketCap.GetAllCoinDataSorted(100)
 	if err != nil {
 		log.Println(err)
-	} else {
-		fmt.Println(top10)
 	}
+
+	return top100
 }
 
 // Top 100 save
-func saveJSON(date string) {
-	top100, err := coinMarketCap.GetAllCoinData(100)
-	if err != nil {
-		log.Println(err)
-	} else {
-		fmt.Println(top100)
-	}
+func saveJSON(date string, top100 []coinMarketCap.Coin) {
 
 	b, err := json.Marshal(top100)
 	if err != nil {

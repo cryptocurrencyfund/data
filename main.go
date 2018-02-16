@@ -1,6 +1,8 @@
 package main
 
 import (
+	"bufio"
+	"encoding/json"
 	"errors"
 	"fmt"
 	"log"
@@ -25,7 +27,8 @@ func main() {
 	seconds := os.Args[1]
 	fmt.Println("Getting price every " + seconds + " seconds")
 
-	fetchPrices(db)
+	// fetchPrices(db)
+	saveJSON(util.DateString())
 }
 
 func fetchPrices(db *bolt.DB) {
@@ -36,4 +39,41 @@ func fetchPrices(db *bolt.DB) {
 	} else {
 		fmt.Println(top10)
 	}
+}
+
+// Top 100 save
+func saveJSON(date string) {
+	top100, err := coinMarketCap.GetAllCoinData(100)
+	if err != nil {
+		log.Println(err)
+	} else {
+		fmt.Println(top100)
+	}
+
+	b, err := json.Marshal(top100)
+	if err != nil {
+		fmt.Println("error:", err)
+	}
+	jsonToDisk(date, b)
+}
+
+func jsonToDisk(date string, bytes []byte) {
+
+	// open output file
+	fo, err := os.Create("./dbFile/" + date + ".json")
+	if err != nil {
+		panic(err)
+	}
+
+	// close fo on exit and check for its returned error
+	defer func() {
+		if err := fo.Close(); err != nil {
+			panic(err)
+		}
+	}()
+
+	// make a write buffer
+	w := bufio.NewWriter(fo)
+	w.Write(bytes)
+	w.Flush()
 }

@@ -2,8 +2,23 @@ package util
 
 import (
 	"fmt"
+	"log"
 	"time"
+
+	bolt "github.com/coreos/bbolt"
+	coinMarketCap "github.com/cryptocurrencyfund/go-coinmarketcap"
 )
+
+// FetchPrices Fetches price from API
+func FetchPrices(db *bolt.DB) []coinMarketCap.Coin {
+	// Get top 10 coins
+	top100, err := coinMarketCap.GetAllCoinDataSorted(100)
+	if err != nil {
+		log.Println(err)
+	}
+
+	return top100
+}
 
 // DateString export date as a string
 func DateString() string {
@@ -18,4 +33,9 @@ func DateString() string {
 	}
 	return fmt.Sprintf("%d-%s-%s", y, mStr, dStr)
 
+}
+
+// TimeNow time now
+func TimeNow() time.Time {
+	return time.Now()
 }

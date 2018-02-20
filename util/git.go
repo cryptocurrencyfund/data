@@ -59,9 +59,7 @@ func gitCommit(date string) {
 func gitPush() {
 	app := "git"
 	arg0 := "push"
-	arg1 := "origin"
-	arg2 := "master"
-	cmd := exec.Command(app, arg0, arg1, arg2)
+	cmd := exec.Command(app, arg0)
 	out, err := cmd.Output()
 
 	if err != nil {

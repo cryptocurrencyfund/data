@@ -61,3 +61,16 @@ func GetCoin(db *bolt.DB, coinName string) map[int64]coinMarketCap.Coin {
 
 	return entries
 }
+
+// ClearBucket delete everything and recreate bucket
+func ClearBucket(db *bolt.DB, bucket string) {
+	db.Update(func(tx *bolt.Tx) error {
+		err := tx.DeleteBucket([]byte(bucket))
+		if err != nil {
+			fmt.Println("Error deleting bucket: "+bucket, err.Error())
+		}
+		tx.CreateBucketIfNotExists([]byte(bucket))
+
+		return err
+	})
+}

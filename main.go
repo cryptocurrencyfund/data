@@ -65,15 +65,14 @@ func top100JSON() {
 }
 
 func top100DB(seconds int) {
-	db := util.OpenDb()
-	defer util.CloseDb(db)
-
 	for {
+		db := util.OpenDb()
 		currentTs := util.TimeNow()
 		top100 := util.FetchPrices(100)
 		for i := 0; i < len(top100); i++ {
 			util.UpdateCoin(db, currentTs, top100[i])
 		}
+		util.CloseDb(db)
 		time.Sleep(time.Duration(seconds) * time.Second)
 	}
 }

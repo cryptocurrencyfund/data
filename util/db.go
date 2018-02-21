@@ -15,10 +15,12 @@ func OpenDb() (db *bolt.DB) {
 		fmt.Println("Cannot open db: ", err.Error())
 		return nil
 	}
+	fmt.Println("DB opened")
 	return
 }
 
 // CloseDb close the database
 func CloseDb(db *bolt.DB) {
 	db.Close()
+	fmt.Println("DB closed")
 }

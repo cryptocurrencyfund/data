@@ -22,7 +22,7 @@ func SaveJSONToFile(date string, top100 []coinMarketCap.Coin) {
 func jsonToDisk(date string, bytes []byte) {
 
 	// open output file
-	fo, err := os.Create("./dbFile/" + date + ".json")
+	fo, err := os.Create("./data/" + date + ".json")
 	if err != nil {
 		panic(err)
 	}

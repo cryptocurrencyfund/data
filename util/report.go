@@ -33,8 +33,28 @@ func createMarkDown(date string, filename string) {
 
 	// make a write buffer
 	w := bufio.NewWriter(fo)
-	w.WriteString("### " + date + "\n")
+	w.WriteString("## " + date + "\n")
 	w.Flush()
+}
+
+func toc(filename string) {
+	f, err := os.OpenFile(filename, os.O_APPEND|os.O_WRONLY, 0600)
+	if err != nil {
+		panic(err)
+	}
+
+	defer f.Close()
+	str := "### Table of contents"
+	str += "1. Price Changes"
+	str += "	1. Price Change Winners(#price-change-winners)"
+	str += "	2. Price Change Losers(#price-change-losers)"
+	str += "2. Volume"
+	str += "	1. 24H Volume Winners(#24h-volume-winners)"
+	str += "	2. 24H Volume Losers(#24h-volume-losers)"
+
+	if _, err = f.WriteString(str); err != nil {
+		panic(err)
+	}
 }
 
 func priceChangeMd(filename string, top []coinMarketCap.Coin) {
@@ -51,11 +71,11 @@ func priceChangeMd(filename string, top []coinMarketCap.Coin) {
 	winners := top[:10]
 	losers := top[len(top)-10:]
 
-	str := "\n#### __Price Change Winners__\n"
+	str := "\n#### Price Change Winners\n"
 	for _, w := range winners {
 		str += w.MarkdownPrice() + "\n"
 	}
-	str += "\n#### __Price Change Losers__\n"
+	str += "\n#### Price Change Losers\n"
 	for _, l := range losers {
 		str += l.MarkdownPrice() + "\n"
 	}
@@ -78,11 +98,11 @@ func volMd(filename string, top []coinMarketCap.Coin) {
 	})
 	volumeWinners := top[:10]
 	volumeLosers := top[len(top)-10:]
-	str := "\n#### __24H Volume Winners__\n"
+	str := "\n#### 24H Volume Winners\n"
 	for _, w := range volumeWinners {
 		str += w.MarkdownVolume() + "\n"
 	}
-	str += "\n#### __24H Volume Losers__\n"
+	str += "\n#### 24H Volume Losers\n"
 	for _, l := range volumeLosers {
 		str += l.MarkdownVolume() + "\n"
 	}

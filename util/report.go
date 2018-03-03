@@ -12,6 +12,7 @@ import (
 func GenerateReport(dateString string, top []coinMarketCap.Coin) {
 	filename := "report/" + YearString() + "/" + dateString + ".md"
 	createMarkDown(dateString, filename)
+	toc(filename)
 	priceChangeMd(filename, top)
 	volMd(filename, top)
 }

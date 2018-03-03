@@ -21,14 +21,14 @@ func Generate(dateString string, top []coinMarketCap.Coin) {
 	sort.Slice(top, func(i, j int) bool {
 		return top[i].PercentChange24h > top[j].PercentChange24h
 	})
-	r.Winners = top[:10]
-	r.Losers = top[len(top)-10:]
+	copy(r.Winners, top[:10])
+	copy(r.Losers, top[len(top)-10:])
 
 	sort.Slice(top, func(i, j int) bool {
 		return top[i].Usd24hVolume > top[j].Usd24hVolume
 	})
-	r.VolumeWinners = top[:10]
-	r.VolumeLosers = top[len(top)-10:]
+	copy(r.VolumeWinners, top[:10])
+	copy(r.VolumeLosers, top[len(top)-10:])
 
 	fmt.Printf("Winners: \n%v\n", r.Winners)
 	fmt.Printf("Losers: \n%v\n", r.Winners)

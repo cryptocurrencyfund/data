@@ -1,6 +1,7 @@
 package report
 
 import (
+	"fmt"
 	"sort"
 
 	coinMarketCap "github.com/cryptocurrencyfund/go-coinmarketcap"
@@ -28,6 +29,11 @@ func Generate(dateString string, top []coinMarketCap.Coin) {
 	})
 	r.VolumeWinners = top[:10]
 	r.VolumeLosers = top[len(top)-10:]
+
+	fmt.Printf("Winners: \n%v\n", r.Winners)
+	fmt.Printf("Losers: \n%v\n", r.Winners)
+	fmt.Printf("Volumn winners: \n%v\n", r.VolumeWinners)
+	fmt.Printf("Volumn losers: \n%v\n", r.VolumeLosers)
 }
 
 // GeneratePortfolio generate portfolio

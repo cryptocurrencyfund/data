@@ -27,6 +27,9 @@ func main() {
 	case "csv":
 		topCSV()
 		break
+	case "report":
+		dailyReport()
+		break
 	case "db":
 		seconds := 5
 		if len(os.Args) > 2 {

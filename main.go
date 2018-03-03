@@ -61,7 +61,7 @@ func top100JSON() {
 		util.SaveJSONToFile(dateString, top100)
 		util.SyncGit(dateString)
 		util.GenerateReport(dateString, top100)
-		// time.Sleep(time.Duration(24) * time.Hour)
+		time.Sleep(time.Duration(24) * time.Hour)
 	}
 }
 

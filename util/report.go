@@ -45,13 +45,13 @@ func toc(filename string) {
 	}
 
 	defer f.Close()
-	str := "### Table of contents"
-	str += "1. Price Changes"
-	str += "	1. Price Change Winners(#price-change-winners)"
-	str += "	2. Price Change Losers(#price-change-losers)"
-	str += "2. Volume"
-	str += "	1. 24H Volume Winners(#24h-volume-winners)"
-	str += "	2. 24H Volume Losers(#24h-volume-losers)"
+	str := "### Table of contents\n"
+	str += "1. Price Changes\n"
+	str += "	1. Price Change Winners(#price-change-winners)\n"
+	str += "	2. Price Change Losers(#price-change-losers)\n"
+	str += "2. Volume\n"
+	str += "	1. 24H Volume Winners(#24h-volume-winners)\n"
+	str += "	2. 24H Volume Losers(#24h-volume-losers)\n"
 
 	if _, err = f.WriteString(str); err != nil {
 		panic(err)

@@ -10,7 +10,7 @@ import (
 
 // Generate Generate daily report
 func Generate(dateString string, top []coinMarketCap.Coin) {
-	filename := dateString + ".md"
+	filename := "data/2018/" + dateString + ".md"
 	createMarkDown(dateString, filename)
 	priceChangeMd(filename, top)
 	volMd(filename, top)

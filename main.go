@@ -21,6 +21,11 @@ func usage() {
 func main() {
 
 	switch os.Args[1] {
+	case "all":
+		topJSON()
+		dailyReport()
+		topCSV()
+		break
 	case "json":
 		topJSON()
 		break
@@ -68,6 +73,24 @@ func topJSON() {
 	}
 }
 
+func dailyReport() {
+	for {
+		top100 := util.FetchPrices(100)
+		dateString := util.DateString()
+		util.GenerateReport(dateString, top100)
+		util.SyncGit(dateString)
+		time.Sleep(time.Duration(24) * time.Hour)
+	}
+}
+func topCSV() {
+	for {
+		dateString := util.DateString()
+		util.GenerateCsv(dateString)
+		util.SyncGit(dateString)
+		time.Sleep(time.Duration(24) * time.Hour)
+	}
+}
+
 func topDB(seconds int) {
 	for {
 		db := util.OpenDb()
@@ -92,9 +115,4 @@ func getCoin(coinName string, detailed bool) {
 		fmt.Println("Coin Entries: " + coinName)
 		fmt.Println(coinEntries)
 	}
-}
-
-func topCSV() {
-	dateString := util.DateString()
-	util.GenerateCsv(dateString)
 }

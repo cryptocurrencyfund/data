@@ -21,11 +21,6 @@ func usage() {
 func main() {
 
 	switch os.Args[1] {
-	case "all":
-		topJSON()
-		dailyReport()
-		topCSV()
-		break
 	case "json":
 		topJSON()
 		break

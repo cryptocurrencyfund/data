@@ -51,11 +51,11 @@ func priceChangeMd(filename string, top []coinMarketCap.Coin) {
 	winners := top[:10]
 	losers := top[len(top)-10:]
 
-	str := "\n#### Price Change Winners\n"
+	str := "\n#### __Price Change Winners__\n"
 	for _, w := range winners {
 		str += w.MarkdownPrice() + "\n"
 	}
-	str += "\n#### Price Change Losers\n"
+	str += "\n#### __Price Change Losers__\n"
 	for _, l := range losers {
 		str += l.MarkdownPrice() + "\n"
 	}
@@ -78,11 +78,11 @@ func volMd(filename string, top []coinMarketCap.Coin) {
 	})
 	volumeWinners := top[:10]
 	volumeLosers := top[len(top)-10:]
-	str := "\n#### 24H Volume Winners\n"
+	str := "\n#### __24H Volume Winners__\n"
 	for _, w := range volumeWinners {
 		str += w.MarkdownVolume() + "\n"
 	}
-	str += "\n#### 24H Volume Losers\n"
+	str += "\n#### __24H Volume Losers__\n"
 	for _, l := range volumeLosers {
 		str += l.MarkdownVolume() + "\n"
 	}

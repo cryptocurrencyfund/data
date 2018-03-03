@@ -7,6 +7,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/cryptocurrencyfund/data/report"
 	"github.com/cryptocurrencyfund/data/util"
 )
 
@@ -60,6 +61,7 @@ func top100JSON() {
 		dateString := util.DateString()
 		util.SaveJSONToFile(dateString, top100)
 		util.SyncGit(dateString)
+		report.Generate(dateString, top100)
 		time.Sleep(time.Duration(24) * time.Hour)
 	}
 }

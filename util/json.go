@@ -10,9 +10,9 @@ import (
 )
 
 // SaveJSONToFile Top 100 save
-func SaveJSONToFile(date string, top100 []coinMarketCap.Coin) {
+func SaveJSONToFile(date string, top []coinMarketCap.Coin) {
 
-	b, err := json.Marshal(top100)
+	b, err := json.Marshal(top)
 	if err != nil {
 		fmt.Println("error:", err)
 	}

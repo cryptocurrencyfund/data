@@ -11,13 +11,13 @@ import (
 
 // FetchPrices Fetches price from API
 func FetchPrices(amount int) []coinMarketCap.Coin {
-	// Get top 10 coins
-	top100, err := coinMarketCap.GetAllCoinDataSorted(amount)
+	// Get top coins
+	top, err := coinMarketCap.GetAllCoinDataSorted(amount)
 	if err != nil {
 		log.Println(err)
 	}
 
-	return top100
+	return top
 }
 
 // DateString export date as a string

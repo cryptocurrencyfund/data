@@ -59,8 +59,8 @@ func top100JSON() {
 		top100 := util.FetchPrices(100)
 		dateString := util.DateString()
 		util.SaveJSONToFile(dateString, top100)
-		util.SyncGit(dateString)
 		util.GenerateReport(dateString, top100)
+		util.SyncGit(dateString)
 		time.Sleep(time.Duration(24) * time.Hour)
 	}
 }

@@ -8,6 +8,9 @@ import (
 	coinMarketCap "github.com/cryptocurrencyfund/go-coinmarketcap"
 )
 
+const winnerColor = "green"
+const loserColor = "red"
+
 // GenerateReport Generate daily report
 func GenerateReport(dateString string, top []coinMarketCap.Coin) {
 	filename := "report/" + YearString() + "/" + dateString + ".md"
@@ -53,11 +56,11 @@ func priceChangeMd(filename string, top []coinMarketCap.Coin) {
 
 	str := "\n#### Price Change Winners\n"
 	for _, w := range winners {
-		str += w.MarkdownPrice() + "\n"
+		str += w.MarkdownPrice(winnerColor) + "\n"
 	}
 	str += "\n#### Price Change Losers\n"
 	for _, l := range losers {
-		str += l.MarkdownPrice() + "\n"
+		str += l.MarkdownPrice(loserColor) + "\n"
 	}
 
 	if _, err = f.WriteString(str); err != nil {
@@ -80,11 +83,11 @@ func volMd(filename string, top []coinMarketCap.Coin) {
 	volumeLosers := top[len(top)-10:]
 	str := "\n#### 24H Volume Winners\n"
 	for _, w := range volumeWinners {
-		str += w.MarkdownPrice() + "\n"
+		str += w.MarkdownVolume() + "\n"
 	}
 	str += "\n#### 24H Volume Losers\n"
 	for _, l := range volumeLosers {
-		str += l.MarkdownPrice() + "\n"
+		str += l.MarkdownVolume() + "\n"
 	}
 
 	if _, err = f.WriteString(str); err != nil {

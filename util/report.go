@@ -1,4 +1,4 @@
-package report
+package util
 
 import (
 	"bufio"
@@ -8,9 +8,9 @@ import (
 	coinMarketCap "github.com/cryptocurrencyfund/go-coinmarketcap"
 )
 
-// Generate Generate daily report
-func Generate(dateString string, top []coinMarketCap.Coin) {
-	filename := "report/2018/" + dateString + ".md"
+// GenerateReport Generate daily report
+func GenerateReport(dateString string, top []coinMarketCap.Coin) {
+	filename := "report/" + YearString() + "/" + dateString + ".md"
 	createMarkDown(dateString, filename)
 	priceChangeMd(filename, top)
 	volMd(filename, top)

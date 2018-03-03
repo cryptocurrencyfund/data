@@ -32,7 +32,12 @@ func DateString() string {
 		dStr = fmt.Sprintf("0%d", d)
 	}
 	return fmt.Sprintf("%d-%s-%s", y, mStr, dStr)
+}
 
+// YearString YearString
+func YearString() string {
+	y, _, _ := time.Now().Date()
+	return fmt.Sprintf("%d", y)
 }
 
 // TimeNow time now in unix

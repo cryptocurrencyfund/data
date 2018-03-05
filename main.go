@@ -21,15 +21,28 @@ func usage() {
 func main() {
 
 	switch os.Args[1] {
+	case "all":
+		for {
+			topJSON()
+			topCSV()
+			dailyReport()
+			time.Sleep(time.Duration(24) * time.Hour)
+		}
 	case "json":
-		topJSON()
-		break
+		for {
+			topJSON()
+			time.Sleep(time.Duration(24) * time.Hour)
+		}
 	case "csv":
-		topCSV()
-		break
+		for {
+			topCSV()
+			time.Sleep(time.Duration(24) * time.Hour)
+		}
 	case "report":
-		dailyReport()
-		break
+		for {
+			dailyReport()
+			time.Sleep(time.Duration(24) * time.Hour)
+		}
 	case "db":
 		seconds := 5
 		if len(os.Args) > 2 {
@@ -61,32 +74,23 @@ func main() {
 }
 
 func topJSON() {
-	for {
-		top100 := util.FetchPrices(100)
-		dateString := util.DateString()
-		util.SaveJSONToFile(dateString, top100)
-		util.GenerateReport(dateString, top100)
-		util.SyncGit(dateString)
-		time.Sleep(time.Duration(24) * time.Hour)
-	}
+	top100 := util.FetchPrices(100)
+	dateString := util.DateString()
+	util.SaveJSONToFile(dateString, top100)
+	util.GenerateReport(dateString, top100)
+	util.SyncGit(dateString)
 }
 
 func dailyReport() {
-	for {
-		top100 := util.FetchPrices(100)
-		dateString := util.DateString()
-		util.GenerateReport(dateString, top100)
-		util.SyncGit(dateString)
-		time.Sleep(time.Duration(24) * time.Hour)
-	}
+	top100 := util.FetchPrices(100)
+	dateString := util.DateString()
+	util.GenerateReport(dateString, top100)
+	util.SyncGit(dateString)
 }
 func topCSV() {
-	for {
-		dateString := util.DateString()
-		util.GenerateCsv(dateString)
-		util.SyncGit(dateString)
-		time.Sleep(time.Duration(24) * time.Hour)
-	}
+	dateString := util.DateString()
+	util.GenerateCsv(dateString)
+	util.SyncGit(dateString)
 }
 
 func topDB(seconds int) {

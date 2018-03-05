@@ -7,6 +7,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/cryptocurrencyfund/data/reference"
 	"github.com/cryptocurrencyfund/data/util"
 )
 
@@ -28,6 +29,10 @@ func main() {
 			dailyReport()
 			time.Sleep(time.Duration(24) * time.Hour)
 		}
+	case "history":
+		crawlAllHistory()
+	case "currencyHistory":
+		crawlCurrencyHistory("ethereum")
 	case "json":
 		for {
 			topJSON()
@@ -91,6 +96,17 @@ func topCSV() {
 	dateString := util.DateString()
 	util.GenerateCsv(dateString)
 	util.SyncGit(dateString)
+}
+
+func crawlAllHistory() {
+	top := util.FetchPrices(100)
+	dateString := util.DateString()
+	reference.CrawlHistoricalData(dateString, top)
+}
+
+func crawlCurrencyHistory(currency string) {
+	dateString := util.DateString()
+	reference.CrawlCurrency(dateString, currency)
 }
 
 func topDB(seconds int) {

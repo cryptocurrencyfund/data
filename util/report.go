@@ -106,6 +106,8 @@ func priceChangeMd(filename string, top []coinMarketCap.Coin) {
 }
 
 func volMd(filename string, top []coinMarketCap.Coin) {
+	top100 := make([]coinMarketCap.Coin, 100)
+	copy(top100, top[:100])
 	f, err := os.OpenFile(filename, os.O_APPEND|os.O_WRONLY, 0600)
 	if err != nil {
 		panic(err)
@@ -116,14 +118,27 @@ func volMd(filename string, top []coinMarketCap.Coin) {
 	sort.Slice(top, func(i, j int) bool {
 		return top[i].Usd24hVolume > top[j].Usd24hVolume
 	})
+	sort.Slice(top100, func(i, j int) bool {
+		return top100[i].Usd24hVolume > top100[j].Usd24hVolume
+	})
 	volumeWinners := top[:10]
 	volumeLosers := top[len(top)-10:]
-	str := "\n#### 24H Volume Winners\n"
+	volumeWinners100 := top100[:10]
+	volumeLosers100 := top100[len(top100)-10:]
+	str := "\n#### 24H Volume Winners (Top 100)\n"
 	for _, w := range volumeWinners {
 		str += w.MarkdownVolume() + "\n"
 	}
-	str += "\n#### 24H Volume Losers\n"
+	str += "\n#### 24H Volume Losers (Top 100)\n"
 	for _, l := range volumeLosers {
+		str += l.MarkdownVolume() + "\n"
+	}
+	str += "\n#### 24H Volume Winners (Top 300)\n"
+	for _, w := range volumeWinners100 {
+		str += w.MarkdownVolume() + "\n"
+	}
+	str += "\n#### 24H Volume Losers (Top 300)\n"
+	for _, l := range volumeLosers100 {
 		str += l.MarkdownVolume() + "\n"
 	}
 

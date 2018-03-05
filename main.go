@@ -11,6 +11,8 @@ import (
 	"github.com/cryptocurrencyfund/data/util"
 )
 
+const topCount = 300
+
 func usage() {
 	fmt.Println("\n\n========== Help ==========")
 	fmt.Println("json: 24 hour job to fetch data for fund reports")
@@ -79,17 +81,17 @@ func main() {
 }
 
 func topJSON() {
-	top100 := util.FetchPrices(100)
+	top := util.FetchPrices(topCount)
 	dateString := util.DateString()
-	util.SaveJSONToFile(dateString, top100)
-	util.GenerateReport(dateString, top100)
+	util.SaveJSONToFile(dateString, top)
+	util.GenerateReport(dateString, top)
 	util.SyncGit(dateString)
 }
 
 func dailyReport() {
-	top100 := util.FetchPrices(100)
+	top := util.FetchPrices(topCount)
 	dateString := util.DateString()
-	util.GenerateReport(dateString, top100)
+	util.GenerateReport(dateString, top)
 	util.SyncGit(dateString)
 }
 func topCSV() {
@@ -99,7 +101,7 @@ func topCSV() {
 }
 
 func crawlAllHistory() {
-	top := util.FetchPrices(100)
+	top := util.FetchPrices(500)
 	dateString := util.DateString()
 	reference.CrawlHistoricalData(dateString, top)
 }
@@ -113,9 +115,9 @@ func topDB(seconds int) {
 	for {
 		db := util.OpenDb()
 		currentTs := util.TimeNow()
-		top100 := util.FetchPrices(100)
-		for i := 0; i < len(top100); i++ {
-			util.UpdateCoin(db, currentTs, top100[i])
+		top := util.FetchPrices(topCount)
+		for i := 0; i < len(top); i++ {
+			util.UpdateCoin(db, currentTs, top[i])
 		}
 		util.CloseDb(db)
 		time.Sleep(time.Duration(seconds) * time.Second)

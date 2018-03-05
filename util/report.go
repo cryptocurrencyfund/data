@@ -47,11 +47,15 @@ func toc(filename string) {
 	defer f.Close()
 	str := "### Table of contents\n"
 	str += "1. Price Changes\n"
-	str += "	1. [Price Change Winners](#price-change-winners)\n"
-	str += "	2. [Price Change Losers](#price-change-losers)\n"
+	str += "	1. [Price Change Winners (Top 100)](#price-change-winners-top-100)\n"
+	str += "	2. [Price Change Losers (Top 100)](#price-change-losers-top-100)\n"
+	str += "	1. [Price Change Winners (Top 100)](#price-change-winners-top-300)\n"
+	str += "	2. [Price Change Losers (Top 300)](#price-change-losers-top-300)\n"
 	str += "2. Volume\n"
-	str += "	1. [24H Volume Winners](#24h-volume-winners)\n"
-	str += "	2. [24H Volume Losers](#24h-volume-losers)\n"
+	str += "	1. [24H Volume Winners(Top 100)](#24h-volume-winners-top-100)\n"
+	str += "	2. [24H Volume Losers(Top 100)](#24h-volume-losers-top-100)\n"
+	str += "	1. [24H Volume Winners(Top 300)](#24h-volume-winners-top-300)\n"
+	str += "	2. [24H Volume Losers(Top 300)](#24h-volume-losers-top-300)\n"
 
 	if _, err = f.WriteString(str); err != nil {
 		panic(err)
@@ -59,6 +63,8 @@ func toc(filename string) {
 }
 
 func priceChangeMd(filename string, top []coinMarketCap.Coin) {
+	top100 := make([]coinMarketCap.Coin, 100)
+	copy(top100, top[:100])
 	f, err := os.OpenFile(filename, os.O_APPEND|os.O_WRONLY, 0600)
 	if err != nil {
 		panic(err)
@@ -69,14 +75,27 @@ func priceChangeMd(filename string, top []coinMarketCap.Coin) {
 	sort.Slice(top, func(i, j int) bool {
 		return top[i].PercentChange24h > top[j].PercentChange24h
 	})
+	sort.Slice(top100, func(i, j int) bool {
+		return top100[i].PercentChange24h > top100[j].PercentChange24h
+	})
 	winners := top[:10]
 	losers := top[len(top)-10:]
+	winners100 := top100[:10]
+	losers100 := top100[len(top100)-10:]
 
-	str := "\n#### Price Change Winners\n"
+	str := "\n#### Price Change Winners (Top 100)\n"
+	for _, w := range winners100 {
+		str += w.MarkdownPrice() + "\n"
+	}
+	str += "\n#### Price Change Losers (Top 100)\n"
+	for _, l := range losers100 {
+		str += l.MarkdownPrice() + "\n"
+	}
+	str += "\n#### Price Change Winners (Top 300)\n"
 	for _, w := range winners {
 		str += w.MarkdownPrice() + "\n"
 	}
-	str += "\n#### Price Change Losers\n"
+	str += "\n#### Price Change Losers (Top 300)\n"
 	for _, l := range losers {
 		str += l.MarkdownPrice() + "\n"
 	}

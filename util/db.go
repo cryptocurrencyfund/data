@@ -10,7 +10,7 @@ import (
 func OpenDb() (db *bolt.DB) {
 	// open db
 	var err error
-	db, err = bolt.Open("dbFile/coinmarketcap.db", 0600, nil)
+	db, err = bolt.Open("data/coinmarketcap.db", 0600, nil)
 	if err != nil {
 		fmt.Println("Cannot open db: ", err.Error())
 		return nil

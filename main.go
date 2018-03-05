@@ -21,16 +21,35 @@ func usage() {
 func main() {
 
 	switch os.Args[1] {
+	case "all":
+		for {
+			topJSON()
+			topCSV()
+			dailyReport()
+			time.Sleep(time.Duration(24) * time.Hour)
+		}
 	case "json":
-		top100JSON()
-		break
+		for {
+			topJSON()
+			time.Sleep(time.Duration(24) * time.Hour)
+		}
+	case "csv":
+		for {
+			topCSV()
+			time.Sleep(time.Duration(24) * time.Hour)
+		}
+	case "report":
+		for {
+			dailyReport()
+			time.Sleep(time.Duration(24) * time.Hour)
+		}
 	case "db":
 		seconds := 5
 		if len(os.Args) > 2 {
 			seconds, _ = strconv.Atoi(os.Args[2])
 		}
 		fmt.Printf("Getting price every %d seconds\n", seconds)
-		top100DB(seconds)
+		topDB(seconds)
 		break
 	case "get":
 		coinType := "Ethereum"
@@ -54,17 +73,27 @@ func main() {
 
 }
 
-func top100JSON() {
-	for {
-		top100 := util.FetchPrices(100)
-		dateString := util.DateString()
-		util.SaveJSONToFile(dateString, top100)
-		util.SyncGit(dateString)
-		time.Sleep(time.Duration(24) * time.Hour)
-	}
+func topJSON() {
+	top100 := util.FetchPrices(100)
+	dateString := util.DateString()
+	util.SaveJSONToFile(dateString, top100)
+	util.GenerateReport(dateString, top100)
+	util.SyncGit(dateString)
 }
 
-func top100DB(seconds int) {
+func dailyReport() {
+	top100 := util.FetchPrices(100)
+	dateString := util.DateString()
+	util.GenerateReport(dateString, top100)
+	util.SyncGit(dateString)
+}
+func topCSV() {
+	dateString := util.DateString()
+	util.GenerateCsv(dateString)
+	util.SyncGit(dateString)
+}
+
+func topDB(seconds int) {
 	for {
 		db := util.OpenDb()
 		currentTs := util.TimeNow()

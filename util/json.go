@@ -10,9 +10,9 @@ import (
 )
 
 // SaveJSONToFile Top 100 save
-func SaveJSONToFile(date string, top100 []coinMarketCap.Coin) {
+func SaveJSONToFile(date string, top []coinMarketCap.Coin) {
 
-	b, err := json.Marshal(top100)
+	b, err := json.Marshal(top)
 	if err != nil {
 		fmt.Println("error:", err)
 	}
@@ -22,7 +22,7 @@ func SaveJSONToFile(date string, top100 []coinMarketCap.Coin) {
 func jsonToDisk(date string, bytes []byte) {
 
 	// open output file
-	fo, err := os.Create("./dbFile/" + date + ".json")
+	fo, err := os.Create("data/" + YearString() + "/" + date + ".json")
 	if err != nil {
 		panic(err)
 	}

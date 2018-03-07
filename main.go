@@ -18,6 +18,8 @@ func usage() {
 	fmt.Println("all: get data, output to json/csv, generate report all in one, push to github")
 	fmt.Println("history: fetch all historical prices for top X number of coins")
 	fmt.Println("currencyHistory: fetch historical prices for a specific currency")
+	fmt.Println("coinInfo: fetch coin information for a specific currency")
+	fmt.Println("allCoinInfo: fetch coin information for all currencies")
 	fmt.Println("json: 24 hour job to fetch data and save as json")
 	fmt.Println("csv: 24 hour job to fetch data and save as csv")
 	fmt.Println("report: 24 hour job to generate a daily report")
@@ -38,8 +40,16 @@ func main() {
 		}
 	case "history":
 		crawlAllHistory()
+		break
 	case "currencyHistory":
 		crawlCurrencyHistory("ethereum")
+		break
+	case "allCoinInfo":
+		crawlAllCoinInfo()
+		break
+	case "coinInfo":
+		crawlCaseInfo("ethereum")
+		break
 	case "json":
 		for {
 			topJSON()
@@ -116,6 +126,15 @@ func crawlCurrencyHistory(currency string) {
 	reference.CrawlCurrency(dateString, currency)
 }
 
+func crawlAllCoinInfo() {
+	top := util.FetchPrices(1500)
+	infos := reference.CrawlAllCoinInfo(top)
+	util.SaveCoinInfo(infos)
+}
+
+func crawlCaseInfo(currency string) {
+	reference.CrawlCoinInfo(currency)
+}
 func topDB(seconds int) {
 	for {
 		db := util.OpenDb()

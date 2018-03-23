@@ -8,6 +8,7 @@ func SyncGit(dateString string) {
 	gitAddAll()
 	gitCommit(dateString)
 	gitPush()
+	gitTag(dateString)
 }
 
 func gitPull() {
@@ -60,6 +61,24 @@ func gitPush() {
 	app := "git"
 	arg0 := "push"
 	cmd := exec.Command(app, arg0)
+	out, err := cmd.Output()
+
+	if err != nil {
+		println(err.Error())
+		return
+	}
+
+	print(string(out))
+}
+
+func gitTag(date string) {
+	app := "git"
+	arg0 := "tag"
+	arg1 := "-a"
+	arg2 := date
+	arg3 := "-m"
+	arg4 := date
+	cmd := exec.Command(app, arg0, arg1, arg2, arg3, arg4)
 	out, err := cmd.Output()
 
 	if err != nil {

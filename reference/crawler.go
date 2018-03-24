@@ -86,8 +86,8 @@ func CrawlCurrency(date string, currency string) (arr []HistorialPrice) {
 		h.High, _ = strconv.ParseFloat(highStr, 64)
 		h.Low, _ = strconv.ParseFloat(lowStr, 64)
 		h.Close, _ = strconv.ParseFloat(closeStr, 64)
-		h.Volume, _ = strconv.ParseFloat(volumeStr, 64)
-		h.MarketCap, _ = strconv.ParseFloat(marketCapStr, 64)
+		h.Volume, _ = strconv.ParseFloat(strings.Trim(volumeStr, ","), 64)
+		h.MarketCap, _ = strconv.ParseFloat(strings.Trim(marketCapStr, ","), 64)
 		arr = append(arr, h)
 
 		writer.Write([]string{

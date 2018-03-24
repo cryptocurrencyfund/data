@@ -126,22 +126,21 @@ func volMd(filename string, top []coinMarketCap.Coin) {
 	volumeWinners100 := top100[:10]
 	volumeLosers100 := top100[len(top100)-10:]
 	str := "\n#### 24H Volume Winners (Top 100)\n"
-	for _, w := range volumeWinners {
-		str += w.MarkdownVolume() + "\n"
-	}
-	str += "\n#### 24H Volume Losers (Top 100)\n"
-	for _, l := range volumeLosers {
-		str += l.MarkdownVolume() + "\n"
-	}
-	str += "\n#### 24H Volume Winners (Top 300)\n"
 	for _, w := range volumeWinners100 {
 		str += w.MarkdownVolume() + "\n"
 	}
-	str += "\n#### 24H Volume Losers (Top 300)\n"
+	str += "\n#### 24H Volume Losers (Top 100)\n"
 	for _, l := range volumeLosers100 {
 		str += l.MarkdownVolume() + "\n"
 	}
-
+	str += "\n#### 24H Volume Winners (Top 300)\n"
+	for _, w := range volumeWinners {
+		str += w.MarkdownVolume() + "\n"
+	}
+	str += "\n#### 24H Volume Losers (Top 300)\n"
+	for _, l := range volumeLosers {
+		str += l.MarkdownVolume() + "\n"
+	}
 	if _, err = f.WriteString(str); err != nil {
 		panic(err)
 	}

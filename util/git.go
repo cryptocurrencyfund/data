@@ -5,7 +5,7 @@ import "os/exec"
 // SyncGit sync git
 func SyncGit(dateString string) {
 	gitPull()
-	// gitAddAll()
+	gitAddAll()
 	gitCommit(dateString)
 	gitTag(dateString)
 	gitPush()

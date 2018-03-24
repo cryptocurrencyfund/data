@@ -14,9 +14,7 @@ func SyncGit(dateString string) {
 func gitPull() {
 	app := "git"
 	arg0 := "pull"
-	arg1 := "origin"
-	arg2 := "master"
-	cmd := exec.Command(app, arg0, arg1, arg2)
+	cmd := exec.Command(app, arg0)
 	out, err := cmd.Output()
 
 	if err != nil {

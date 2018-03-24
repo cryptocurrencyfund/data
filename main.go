@@ -99,7 +99,6 @@ func topJSON() {
 	top := util.FetchPrices(topCount)
 	dateString := util.DateString()
 	util.SaveJSONToFile(dateString, top)
-	util.GenerateReport(dateString, top)
 	util.SyncGit(dateString)
 }
 

@@ -5,10 +5,10 @@ import "os/exec"
 // SyncGit sync git
 func SyncGit(dateString string) {
 	gitPull()
-	gitAddAll()
+	// gitAddAll()
 	gitCommit(dateString)
-	gitPush()
 	gitTag(dateString)
+	gitPush()
 }
 
 func gitPull() {
@@ -60,7 +60,9 @@ func gitCommit(date string) {
 func gitPush() {
 	app := "git"
 	arg0 := "push"
-	cmd := exec.Command(app, arg0)
+	arg1 := "origin"
+	arg2 := "--tags"
+	cmd := exec.Command(app, arg0, arg1, arg2)
 	out, err := cmd.Output()
 
 	if err != nil {

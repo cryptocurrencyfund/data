@@ -100,6 +100,7 @@ func topJSON() {
 	dateString := util.DateString()
 	util.SaveJSONToFile(dateString, top)
 	util.SyncGit(dateString)
+	fmt.Println("Top JSON saved to file")
 }
 
 func dailyReport() {
@@ -107,11 +108,13 @@ func dailyReport() {
 	dateString := util.DateString()
 	util.GenerateReport(dateString, top)
 	util.SyncGit(dateString)
+	fmt.Println("Daily report saved to file")
 }
 func topCSV() {
 	dateString := util.DateString()
 	util.GenerateCsv(dateString)
 	util.SyncGit(dateString)
+	fmt.Println("Top CSV saved to file")
 }
 
 func crawlAllHistory() {

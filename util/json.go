@@ -10,8 +10,8 @@ import (
 	coinMarketCap "github.com/cryptocurrencyfund/go-coinmarketcap"
 )
 
-// SaveJSONToFile Top 100 save
-func SaveJSONToFile(date string, top []coinMarketCap.Coin) {
+// SaveTopPrices Top 100 save
+func SaveTopPrices(date string, top []coinMarketCap.Coin) {
 
 	b, err := json.Marshal(top)
 	if err != nil {
@@ -50,6 +50,33 @@ func SaveCoinInfo(infos []reference.CoinInfo) {
 
 	// write json to disk
 	fo, err := os.Create("reference/coinInfo/coinInfo.json")
+	if err != nil {
+		panic(err)
+	}
+
+	// close fo on exit and check for its returned error
+	defer func() {
+		if err := fo.Close(); err != nil {
+			panic(err)
+		}
+	}()
+
+	// make a write buffer
+	w := bufio.NewWriter(fo)
+	w.Write(bytes)
+	w.Flush()
+}
+
+// SaveHistorialPrices SaveHistorialPrices
+func SaveHistorialPrices(p reference.HistorialPrices) {
+
+	bytes, err := json.Marshal(p)
+	if err != nil {
+		fmt.Println("error:", err)
+	}
+
+	// write json to disk
+	fo, err := os.Create("reference/coinInfo/historialPrices.json")
 	if err != nil {
 		panic(err)
 	}

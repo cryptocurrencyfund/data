@@ -33,8 +33,8 @@ func main() {
 	switch os.Args[1] {
 	case "all":
 		for {
-			topJSON()
-			topCSV()
+			topPricesToJSON()
+			topPricesToCSV()
 			dailyReport()
 			time.Sleep(time.Duration(24) * time.Hour)
 		}
@@ -52,12 +52,12 @@ func main() {
 		break
 	case "json":
 		for {
-			topJSON()
+			topPricesToJSON()
 			time.Sleep(time.Duration(24) * time.Hour)
 		}
 	case "csv":
 		for {
-			topCSV()
+			topPricesToCSV()
 			time.Sleep(time.Duration(24) * time.Hour)
 		}
 	case "report":
@@ -95,10 +95,10 @@ func main() {
 
 }
 
-func topJSON() {
+func topPricesToJSON() {
 	top := util.FetchPrices(topCount)
 	dateString := util.DateString()
-	util.SaveJSONToFile(dateString, top)
+	util.SaveTopPrices(dateString, top)
 	util.SyncGit(dateString)
 	fmt.Println("Top JSON saved to file")
 }
@@ -110,7 +110,7 @@ func dailyReport() {
 	util.SyncGit(dateString)
 	fmt.Println("Daily report saved to file")
 }
-func topCSV() {
+func topPricesToCSV() {
 	dateString := util.DateString()
 	util.GenerateCsv(dateString)
 	util.SyncGit(dateString)
@@ -120,7 +120,8 @@ func topCSV() {
 func crawlAllHistory() {
 	top := util.FetchPrices(500)
 	dateString := util.DateString()
-	reference.CrawlHistoricalData(dateString, top)
+	h := reference.CrawlHistoricalData(dateString, top)
+	util.SaveHistorialPrices(h)
 }
 
 func crawlCurrencyHistory(currency string) {

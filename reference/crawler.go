@@ -5,7 +5,11 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"strconv"
 	"strings"
+	"time"
+
+	"github.com/araddon/dateparse"
 
 	coinMarketCap "github.com/cryptocurrencyfund/go-coinmarketcap"
 	"github.com/gocolly/colly"
@@ -22,16 +26,34 @@ type CoinInfo struct {
 	Github       string `json:"github"`
 }
 
+// HistorialPrice HistorialPrice
+type HistorialPrice struct {
+	Date      time.Time `json:"date"`
+	Open      float64   `json:"open"`
+	High      float64   `json:"high"`
+	Low       float64   `json:"low"`
+	Close     float64   `json:"close"`
+	Volume    float64   `json:"volume"`
+	MarketCap float64   `json:"marketCap"`
+}
+
+// HistorialPrices HistoricalPrices
+type HistorialPrices map[string][]HistorialPrice
+
 // CrawlHistoricalData CrawlHistoricalData
-func CrawlHistoricalData(date string, top []coinMarketCap.Coin) {
+func CrawlHistoricalData(date string, top []coinMarketCap.Coin) (h HistorialPrices) {
+	h = make(HistorialPrices)
 	for _, v := range top {
 		currency := strings.ToLower(v.ID)
-		CrawlCurrency(date, currency)
+		h[v.ID] = CrawlCurrency(date, currency)
 	}
+
+	fmt.Printf("Crawl historical data: %d\n", len(h))
+	return
 }
 
 // CrawlCurrency CrawlCurrency
-func CrawlCurrency(date string, currency string) {
+func CrawlCurrency(date string, currency string) (arr []HistorialPrice) {
 	filename := "reference/historical/" + currency + ".csv"
 	file, err := os.Create(filename)
 	if err != nil {
@@ -48,15 +70,34 @@ func CrawlCurrency(date string, currency string) {
 	// Instantiate default collector
 	c := colly.NewCollector()
 
+	// init historical price array
+	var h HistorialPrice
+
 	c.OnHTML("#historical-data tbody tr", func(e *colly.HTMLElement) {
+		dateStr := e.ChildText("td:nth-child(1)")
+		openStr := e.ChildText("td:nth-child(2)")
+		highStr := e.ChildText("td:nth-child(3)")
+		lowStr := e.ChildText("td:nth-child(4)")
+		closeStr := e.ChildText("td:nth-child(5)")
+		volumeStr := e.ChildText("td:nth-child(6)")
+		marketCapStr := e.ChildText("td:nth-child(7)")
+		h.Date, _ = dateparse.ParseAny(dateStr)
+		h.Open, _ = strconv.ParseFloat(openStr, 64)
+		h.High, _ = strconv.ParseFloat(highStr, 64)
+		h.Low, _ = strconv.ParseFloat(lowStr, 64)
+		h.Close, _ = strconv.ParseFloat(closeStr, 64)
+		h.Volume, _ = strconv.ParseFloat(volumeStr, 64)
+		h.MarketCap, _ = strconv.ParseFloat(marketCapStr, 64)
+		arr = append(arr, h)
+
 		writer.Write([]string{
-			e.ChildText("td:nth-child(1)"),
-			e.ChildText("td:nth-child(2)"),
-			e.ChildText("td:nth-child(3)"),
-			e.ChildText("td:nth-child(4)"),
-			e.ChildText("td:nth-child(5)"),
-			e.ChildText("td:nth-child(6)"),
-			e.ChildText("td:nth-child(7)"),
+			dateStr,
+			openStr,
+			highStr,
+			lowStr,
+			closeStr,
+			volumeStr,
+			marketCapStr,
 		})
 	})
 	end := strings.Trim(date, "-")
@@ -64,6 +105,7 @@ func CrawlCurrency(date string, currency string) {
 		currency,
 		end)
 	c.Visit(url)
+	return
 }
 
 // CrawlCoinInfo CrawlCoinInfo

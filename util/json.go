@@ -76,7 +76,7 @@ func SaveHistorialPrices(p reference.HistorialPrices) {
 	}
 
 	// write json to disk
-	fo, err := os.Create("reference/coinInfo/historialPrices.json")
+	fo, err := os.Create("reference/historical/historialPrices.json")
 	if err != nil {
 		panic(err)
 	}

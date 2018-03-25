@@ -65,7 +65,7 @@ func DrawChart(res http.ResponseWriter, req *http.Request) {
 func getXY() ([]time.Time, []float64) {
 	h := GetHistoricalPrices()
 	currency := h["bitcoin"]
-	var xArr []time.Time
+	var xArr []string
 	var yArr []float64
 	var dates []time.Time
 	for _, s := range currency {
@@ -75,7 +75,7 @@ func getXY() ([]time.Time, []float64) {
 	fmt.Printf("%v\n", xArr)
 	fmt.Printf("%v\n", yArr)
 	for _, ts := range xArr {
-		parsed, _ := time.Parse(chart.DefaultDateFormat, ts.String())
+		parsed, _ := time.Parse(chart.DefaultDateFormat, ts)
 		dates = append(dates, parsed)
 	}
 

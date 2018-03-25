@@ -7,9 +7,6 @@ import (
 	"os"
 	"strconv"
 	"strings"
-	"time"
-
-	"github.com/araddon/dateparse"
 
 	coinMarketCap "github.com/cryptocurrencyfund/go-coinmarketcap"
 	"github.com/gocolly/colly"
@@ -28,13 +25,13 @@ type CoinInfo struct {
 
 // HistorialPrice HistorialPrice
 type HistorialPrice struct {
-	Date      time.Time `json:"date"`
-	Open      float64   `json:"open"`
-	High      float64   `json:"high"`
-	Low       float64   `json:"low"`
-	Close     float64   `json:"close"`
-	Volume    float64   `json:"volume"`
-	MarketCap float64   `json:"marketCap"`
+	Date      string  `json:"date"`
+	Open      float64 `json:"open"`
+	High      float64 `json:"high"`
+	Low       float64 `json:"low"`
+	Close     float64 `json:"close"`
+	Volume    string  `json:"volume"`
+	MarketCap string  `json:"marketCap"`
 }
 
 // HistorialPrices HistoricalPrices
@@ -81,13 +78,15 @@ func CrawlCurrency(date string, currency string) (arr []HistorialPrice) {
 		closeStr := e.ChildText("td:nth-child(5)")
 		volumeStr := e.ChildText("td:nth-child(6)")
 		marketCapStr := e.ChildText("td:nth-child(7)")
-		h.Date, _ = dateparse.ParseAny(dateStr)
+		fmt.Println("Volume: " + volumeStr)
+		fmt.Println("marketCapStr: " + marketCapStr)
+		h.Date = dateStr
 		h.Open, _ = strconv.ParseFloat(openStr, 64)
 		h.High, _ = strconv.ParseFloat(highStr, 64)
 		h.Low, _ = strconv.ParseFloat(lowStr, 64)
 		h.Close, _ = strconv.ParseFloat(closeStr, 64)
-		h.Volume, _ = strconv.ParseFloat(strings.Trim(volumeStr, ","), 64)
-		h.MarketCap, _ = strconv.ParseFloat(strings.Trim(marketCapStr, ","), 64)
+		h.Volume = strings.Trim(volumeStr, ",")
+		h.MarketCap = strings.Trim(marketCapStr, ",")
 		arr = append(arr, h)
 
 		writer.Write([]string{

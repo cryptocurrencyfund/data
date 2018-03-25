@@ -7,6 +7,7 @@ import (
 	"os"
 	"strconv"
 	"strings"
+	"time"
 
 	coinMarketCap "github.com/cryptocurrencyfund/go-coinmarketcap"
 	"github.com/gocolly/colly"
@@ -98,11 +99,23 @@ func CrawlCurrency(date string, currency string) (arr []HistorialPrice) {
 		})
 		fmt.Println("[" + currency + "] - Writing: " + dateStr)
 	})
+
+	c.Limit(&colly.LimitRule{
+		Parallelism: 2,
+		RandomDelay: 5 * time.Second,
+	})
+
+	c.OnRequest(func(r *colly.Request) {
+		fmt.Println("Visiting", r.URL.String())
+
+	})
+
 	end := strings.Trim(date, "-")
 	url := fmt.Sprintf("https://coinmarketcap.com/currencies/%s/historical-data/?start=20110101&end=%s",
 		currency,
 		end)
 	c.Visit(url)
+	c.Wait()
 	return
 }
 

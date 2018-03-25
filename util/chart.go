@@ -5,6 +5,7 @@ import (
 	"net/http"
 	"time"
 
+	"github.com/araddon/dateparse"
 	"github.com/wcharczuk/go-chart"
 	"github.com/wcharczuk/go-chart/drawing" //exposes "chart"
 )
@@ -47,10 +48,6 @@ func DrawChart(res http.ResponseWriter, req *http.Request) {
 		},
 		YAxis: chart.YAxis{
 			Style: chart.Style{Show: true},
-			Range: &chart.ContinuousRange{
-				Max: 220.0,
-				Min: 180.0,
-			},
 		},
 		Series: []chart.Series{
 			bbSeries,
@@ -65,21 +62,23 @@ func DrawChart(res http.ResponseWriter, req *http.Request) {
 func getXY() ([]time.Time, []float64) {
 	h := GetHistoricalPrices()
 	currency := h["bitcoin"]
-	var xArr []string
+	var dates []string
 	var yArr []float64
-	var dates []time.Time
+	var xArr []time.Time
 	for _, s := range currency {
-		xArr = append(xArr, s.Date)
+		dTime, _ := dateparse.ParseAny(s.Date)
+		d := dTime.Format(chart.DefaultDateFormat)
+		dates = append(dates, d)
 		yArr = append(yArr, s.Close)
 	}
-	fmt.Printf("%v\n", xArr)
+	fmt.Printf("%v\n", dates)
 	fmt.Printf("%v\n", yArr)
-	for _, ts := range xArr {
+	for _, ts := range dates {
 		parsed, _ := time.Parse(chart.DefaultDateFormat, ts)
-		dates = append(dates, parsed)
+		xArr = append(xArr, parsed)
 	}
 
-	return dates, yArr
+	return xArr, yArr
 }
 
 func xvalues() []time.Time {

@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"net/http"
 	"os"
 	"strconv"
 	"strings"
@@ -65,6 +66,9 @@ func main() {
 			dailyReport()
 			time.Sleep(time.Duration(24) * time.Hour)
 		}
+	case "chart":
+		chart()
+		break
 	case "db":
 		seconds := 5
 		if len(os.Args) > 2 {
@@ -162,4 +166,9 @@ func getCoin(coinName string, detailed bool) {
 		fmt.Println("Coin Entries: " + coinName)
 		fmt.Println(coinEntries)
 	}
+}
+
+func chart() {
+	http.HandleFunc("/", util.DrawChart)
+	http.ListenAndServe(":8080", nil)
 }

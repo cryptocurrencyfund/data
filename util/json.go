@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"encoding/json"
 	"fmt"
+	"io/ioutil"
 	"os"
 
 	"github.com/cryptocurrencyfund/data/reference"
@@ -92,4 +93,15 @@ func SaveHistorialPrices(p reference.HistorialPrices) {
 	w := bufio.NewWriter(fo)
 	w.Write(bytes)
 	w.Flush()
+}
+
+// GetHistoricalPrices GetHistoricalPrices
+func GetHistoricalPrices() (p reference.HistorialPrices) {
+	file, e := ioutil.ReadFile("reference/historical/historialPrices.json")
+	if e != nil {
+		fmt.Printf("File error: %v\n", e)
+		os.Exit(1)
+	}
+	json.Unmarshal(file, &p)
+	return
 }

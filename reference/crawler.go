@@ -85,8 +85,8 @@ func CrawlCurrency(date string, currency string) (arr []HistorialPrice) {
 		h.High, _ = strconv.ParseFloat(highStr, 64)
 		h.Low, _ = strconv.ParseFloat(lowStr, 64)
 		h.Close, _ = strconv.ParseFloat(closeStr, 64)
-		h.Volume = strings.Trim(volumeStr, ",")
-		h.MarketCap = strings.Trim(marketCapStr, ",")
+		h.Volume = strings.Replace(volumeStr, ",", "", -1)
+		h.MarketCap = strings.Replace(marketCapStr, ",", "", -1)
 		arr = append(arr, h)
 		writer.Write([]string{
 			dateStr,
@@ -110,7 +110,7 @@ func CrawlCurrency(date string, currency string) (arr []HistorialPrice) {
 
 	})
 
-	end := strings.Trim(date, "-")
+	end := strings.Replace(date, "-", "", -1)
 	url := fmt.Sprintf("https://coinmarketcap.com/currencies/%s/historical-data/?start=20110101&end=%s",
 		currency,
 		end)

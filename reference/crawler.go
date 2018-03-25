@@ -60,6 +60,7 @@ func CrawlCurrency(date string, currency string) (arr []HistorialPrice) {
 	defer file.Close()
 	writer := csv.NewWriter(file)
 	defer writer.Flush()
+	// defer return arr
 
 	// Write CSV header
 	writer.Write([]string{"Date", "Open", "High", "Low", "Close", "Volume", "Market Cap"})
@@ -78,8 +79,6 @@ func CrawlCurrency(date string, currency string) (arr []HistorialPrice) {
 		closeStr := e.ChildText("td:nth-child(5)")
 		volumeStr := e.ChildText("td:nth-child(6)")
 		marketCapStr := e.ChildText("td:nth-child(7)")
-		fmt.Println("Volume: " + volumeStr)
-		fmt.Println("marketCapStr: " + marketCapStr)
 		h.Date = dateStr
 		h.Open, _ = strconv.ParseFloat(openStr, 64)
 		h.High, _ = strconv.ParseFloat(highStr, 64)
@@ -88,7 +87,6 @@ func CrawlCurrency(date string, currency string) (arr []HistorialPrice) {
 		h.Volume = strings.Trim(volumeStr, ",")
 		h.MarketCap = strings.Trim(marketCapStr, ",")
 		arr = append(arr, h)
-
 		writer.Write([]string{
 			dateStr,
 			openStr,
@@ -98,6 +96,7 @@ func CrawlCurrency(date string, currency string) (arr []HistorialPrice) {
 			volumeStr,
 			marketCapStr,
 		})
+		fmt.Println("[" + currency + "] - Writing: " + dateStr)
 	})
 	end := strings.Trim(date, "-")
 	url := fmt.Sprintf("https://coinmarketcap.com/currencies/%s/historical-data/?start=20110101&end=%s",

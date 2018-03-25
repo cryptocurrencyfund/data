@@ -50,7 +50,7 @@ func SaveCoinInfo(infos []reference.CoinInfo) {
 	}
 
 	// write json to disk
-	fo, err := os.Create("reference/coinInfo/coinInfo.json")
+	fo, err := os.Create("reference/coinInfo/all.json")
 	if err != nil {
 		panic(err)
 	}
@@ -77,7 +77,7 @@ func SaveHistorialPrices(p reference.HistorialPrices) {
 	}
 
 	// write json to disk
-	fo, err := os.Create("reference/historical/historialPrices.json")
+	fo, err := os.Create("reference/historical/all.json")
 	if err != nil {
 		panic(err)
 	}
@@ -97,7 +97,7 @@ func SaveHistorialPrices(p reference.HistorialPrices) {
 
 // GetHistoricalPrices GetHistoricalPrices
 func GetHistoricalPrices() (p reference.HistorialPrices) {
-	file, e := ioutil.ReadFile("reference/historical/historialPrices.json")
+	file, e := ioutil.ReadFile("reference/historical/all.json")
 	if e != nil {
 		fmt.Printf("File error: %v\n", e)
 		os.Exit(1)

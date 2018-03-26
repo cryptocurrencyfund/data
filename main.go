@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"net/http"
 	"os"
 	"strconv"
 	"strings"
@@ -66,8 +65,14 @@ func main() {
 			dailyReport()
 			time.Sleep(time.Duration(24) * time.Hour)
 		}
-	case "chart":
-		chart()
+	case "allCurrencyCharts":
+		allCurrencyCharts()
+		break
+	case "comparisonCharts":
+		comparisonCharts()
+		break
+	case "portfolioCharts":
+		portfolioCharts()
 		break
 	case "db":
 		seconds := 5
@@ -168,7 +173,22 @@ func getCoin(coinName string, detailed bool) {
 	}
 }
 
-func chart() {
-	http.HandleFunc("/", util.DrawChart)
-	http.ListenAndServe(":8080", nil)
+func allCurrencyCharts() {
+	// http.HandleFunc("/", util.DrawChart)
+	// http.ListenAndServe(":8080", nil)
+	priceMap := util.GetHistoricalPrices()
+	for k := range priceMap {
+		currency := k
+		util.DrawCurrencyChart(currency)
+	}
+}
+
+func comparisonCharts() {
+	c1 := "bitcoin"
+	c2 := "ethereum"
+	util.DrawComparisonChart(c1, c2)
+}
+
+func portfolioCharts() {
+	util.DrawPortfolioComparisonChart(1000.00, "2018-01-01", "bitcoin", "ethereum", "neo")
 }

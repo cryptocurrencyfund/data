@@ -141,7 +141,7 @@ func DrawComparisonChart(currencies ...string) {
 }
 
 // DrawPortfolioComparisonChart DrawPortfolioComparisonChart
-func DrawPortfolioComparisonChart(investAmount float64, investDate string, currencies ...string) {
+func DrawPortfolioComparisonChart(investAmount float64, investDate string, comparisonName string, currencies ...string) {
 
 	var allTs [][]time.Time
 	var allPrices [][]float64
@@ -212,7 +212,7 @@ func DrawPortfolioComparisonChart(investAmount float64, investDate string, curre
 		log.Fatal(err)
 	}
 
-	outputFile, err := os.Create("charts/portfolio/" + currencies[0] + ".jpg")
+	outputFile, err := os.Create("charts/portfolio/" + comparisonName + ".jpg")
 	if err != nil {
 		// Handle error
 	}

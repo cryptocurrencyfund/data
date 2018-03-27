@@ -227,4 +227,28 @@ func portfolioCharts() {
 	}
 	util.DrawPortfolioChart(1000.00, "2018-01-01", "casm", portfolio)
 
+	portfolio = []util.DumbPortfolio{
+		util.DumbPortfolio{
+			Currency: "bitcoin",
+			Weight:   0.2,
+		},
+		util.DumbPortfolio{
+			Currency: "ethereum",
+			Weight:   0.2,
+		},
+		util.DumbPortfolio{
+			Currency: "litecoin",
+			Weight:   0.2,
+		},
+		util.DumbPortfolio{
+			Currency: "zcash",
+			Weight:   0.2,
+		},
+		util.DumbPortfolio{
+			Currency: "ripple",
+			Weight:   0.2,
+		},
+	}
+	util.DrawPortfolioChart(1000.00, "2018-01-01", "casm2", portfolio)
+
 }

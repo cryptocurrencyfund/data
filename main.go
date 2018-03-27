@@ -24,6 +24,7 @@ func usage() {
 	fmt.Println("currencyCharts: currency charts with price/market cap")
 	fmt.Println("comparisonCharts: comparing 2+ currencies charts")
 	fmt.Println("themeCharts: theme-based charts")
+	fmt.Println("portfolioCharts: portfolio charts")
 	fmt.Println("\n========== Cron Jobs ==========")
 	fmt.Println("all: get data, output to json/csv, generate report all in one, push to github")
 	fmt.Println("json: 24 hour job to fetch data and save as json")
@@ -79,6 +80,9 @@ func main() {
 		break
 	case "themeCharts":
 		themeCharts()
+		break
+	case "portfolioCharts":
+		portfolioCharts()
 		break
 	case "db":
 		seconds := 5
@@ -200,4 +204,27 @@ func themeCharts() {
 	util.DrawThemeChart(1000.00, "2018-01-01", "stables", "maker", "trust", "digixdao", "dai", "tether")
 	util.DrawThemeChart(1000.00, "2018-01-01", "utility", "basic-attention-token", "golem-network-tokens", "request-network", "funfair", "quantstamp")
 	util.DrawThemeChart(1000.00, "2018-01-01", "asia", "neo", "tron", "trinity-network-credit", "icon", "ontology", "storm", "bytom")
+}
+
+func portfolioCharts() {
+	portfolio := []util.DumbPortfolio{
+		util.DumbPortfolio{
+			Currency: "bitcoin",
+			Weight:   0.3,
+		},
+		util.DumbPortfolio{
+			Currency: "ethereum",
+			Weight:   0.3,
+		},
+		util.DumbPortfolio{
+			Currency: "litecoin",
+			Weight:   0.3,
+		},
+		util.DumbPortfolio{
+			Currency: "binance-coin",
+			Weight:   0.3,
+		},
+	}
+	util.DrawPortfolioChart(1000.00, "2018-01-01", "casm", portfolio)
+
 }

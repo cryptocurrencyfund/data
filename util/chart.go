@@ -163,10 +163,9 @@ func DrawPortfolioComparisonChart(investAmount float64, investDate string, compa
 	}
 
 	// Print:
-	logToFile := ""
+	logToFile := "[chart](https://raw.githubusercontent.com/cryptocurrencyfund/data/develop/charts/portfolio/" + comparisonName + ".jpg)\n\n"
 	for c := 0; c < len(currencies); c++ {
 		logToFile += "### " + currencies[c] + "\n"
-		logToFile += "[chart](https://raw.githubusercontent.com/cryptocurrencyfund/data/develop/charts/portfolio/" + currencies[c] + ".jpg)"
 		fmt.Println("[" + currencies[c] + "]")
 		for k, v := range allTs[c] {
 			current := fmt.Sprintf("Date bought: %s - Current Date: %s - Valuation: %.2f - Price: %.2f \n",

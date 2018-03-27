@@ -188,7 +188,7 @@ func comparisonCharts() {
 }
 
 func portfolioCharts() {
-	util.DrawPortfolioComparisonChart(1000.00, "2018-01-01", "large cap", "bitcoin", "ethereum", "ripple", "litecoin", "bitcoin-cash", "zcash", "monero")
+	util.DrawPortfolioComparisonChart(1000.00, "2018-01-01", "large_cap", "bitcoin", "ethereum", "ripple", "litecoin", "bitcoin-cash", "zcash", "monero")
 	util.DrawPortfolioComparisonChart(1000.00, "2018-01-01", "protocol", "ethereum", "omisego", "stellar", "neo", "icon", "zilliqa", "trinity-network-credit")
 	util.DrawPortfolioComparisonChart(1000.00, "2018-01-01", "exchanges", "binance-coin", "augur", "gnosis-gno", "0x", "kyber-network", "bancor", "airswap", "republic-protocol")
 	util.DrawPortfolioComparisonChart(1000.00, "2018-01-01", "stables", "maker", "trust", "digixdao", "dai", "tether")

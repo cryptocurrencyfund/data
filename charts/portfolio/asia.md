@@ -1,5 +1,7 @@
+[chart](https://raw.githubusercontent.com/cryptocurrencyfund/data/develop/charts/portfolio/asia.jpg)
+
 ### neo
-[chart](https://raw.githubusercontent.com/cryptocurrencyfund/data/develop/charts/portfolio/neo.jpg)* Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 833.93 - Price: 65.73 
+* Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 833.93 - Price: 65.73 
 * Date bought: 2018-01-01 - Current Date: 2018-03-23 00:00:00 +0000 UTC - Valuation: 869.83 - Price: 68.56 
 * Date bought: 2018-01-01 - Current Date: 2018-03-22 00:00:00 +0000 UTC - Valuation: 883.53 - Price: 69.64 
 * Date bought: 2018-01-01 - Current Date: 2018-03-21 00:00:00 +0000 UTC - Valuation: 925.53 - Price: 72.95 
@@ -83,7 +85,7 @@
 * Date bought: 2018-01-01 - Current Date: 2018-01-02 00:00:00 +0000 UTC - Valuation: 1146.03 - Price: 90.33 
 * Date bought: 2018-01-01 - Current Date: 2018-01-01 00:00:00 +0000 UTC - Valuation: 1000.00 - Price: 78.82 
 ### tron
-[chart](https://raw.githubusercontent.com/cryptocurrencyfund/data/develop/charts/portfolio/tron.jpg)* Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 962.96 - Price: 0.05 
+* Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 962.96 - Price: 0.05 
 * Date bought: 2018-01-01 - Current Date: 2018-03-23 00:00:00 +0000 UTC - Valuation: 795.76 - Price: 0.04 
 * Date bought: 2018-01-01 - Current Date: 2018-03-22 00:00:00 +0000 UTC - Valuation: 733.61 - Price: 0.04 
 * Date bought: 2018-01-01 - Current Date: 2018-03-21 00:00:00 +0000 UTC - Valuation: 717.81 - Price: 0.04 
@@ -167,7 +169,7 @@
 * Date bought: 2018-01-01 - Current Date: 2018-01-02 00:00:00 +0000 UTC - Valuation: 1522.04 - Price: 0.08 
 * Date bought: 2018-01-01 - Current Date: 2018-01-01 00:00:00 +0000 UTC - Valuation: 1000.00 - Price: 0.05 
 ### trinity-network-credit
-[chart](https://raw.githubusercontent.com/cryptocurrencyfund/data/develop/charts/portfolio/trinity-network-credit.jpg)* Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 410.78 - Price: 0.11 
+* Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 410.78 - Price: 0.11 
 * Date bought: 2018-01-01 - Current Date: 2018-03-23 00:00:00 +0000 UTC - Valuation: 399.49 - Price: 0.11 
 * Date bought: 2018-01-01 - Current Date: 2018-03-22 00:00:00 +0000 UTC - Valuation: 413.98 - Price: 0.11 
 * Date bought: 2018-01-01 - Current Date: 2018-03-21 00:00:00 +0000 UTC - Valuation: 434.86 - Price: 0.12 
@@ -230,7 +232,7 @@
 * Date bought: 2018-01-01 - Current Date: 2018-01-23 00:00:00 +0000 UTC - Valuation: 888.33 - Price: 0.24 
 * Date bought: 2018-01-01 - Current Date: 2018-01-22 00:00:00 +0000 UTC - Valuation: 1000.00 - Price: 0.27 
 ### icon
-[chart](https://raw.githubusercontent.com/cryptocurrencyfund/data/develop/charts/portfolio/icon.jpg)* Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 590.91 - Price: 3.64 
+* Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 590.91 - Price: 3.64 
 * Date bought: 2018-01-01 - Current Date: 2018-03-23 00:00:00 +0000 UTC - Valuation: 659.09 - Price: 4.06 
 * Date bought: 2018-01-01 - Current Date: 2018-03-22 00:00:00 +0000 UTC - Valuation: 582.79 - Price: 3.59 
 * Date bought: 2018-01-01 - Current Date: 2018-03-21 00:00:00 +0000 UTC - Valuation: 563.31 - Price: 3.47 
@@ -314,7 +316,7 @@
 * Date bought: 2018-01-01 - Current Date: 2018-01-02 00:00:00 +0000 UTC - Valuation: 1053.57 - Price: 6.49 
 * Date bought: 2018-01-01 - Current Date: 2018-01-01 00:00:00 +0000 UTC - Valuation: 1000.00 - Price: 6.16 
 ### ontology
-[chart](https://raw.githubusercontent.com/cryptocurrencyfund/data/develop/charts/portfolio/ontology.jpg)* Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 503.52 - Price: 1.43 
+* Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 503.52 - Price: 1.43 
 * Date bought: 2018-01-01 - Current Date: 2018-03-23 00:00:00 +0000 UTC - Valuation: 482.39 - Price: 1.37 
 * Date bought: 2018-01-01 - Current Date: 2018-03-22 00:00:00 +0000 UTC - Valuation: 461.27 - Price: 1.31 
 * Date bought: 2018-01-01 - Current Date: 2018-03-21 00:00:00 +0000 UTC - Valuation: 496.48 - Price: 1.41 
@@ -332,7 +334,7 @@
 * Date bought: 2018-01-01 - Current Date: 2018-03-09 00:00:00 +0000 UTC - Valuation: 577.46 - Price: 1.64 
 * Date bought: 2018-01-01 - Current Date: 2018-03-08 00:00:00 +0000 UTC - Valuation: 1000.00 - Price: 2.84 
 ### storm
-[chart](https://raw.githubusercontent.com/cryptocurrencyfund/data/develop/charts/portfolio/storm.jpg)* Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 784.30 - Price: 0.05 
+* Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 784.30 - Price: 0.05 
 * Date bought: 2018-01-01 - Current Date: 2018-03-23 00:00:00 +0000 UTC - Valuation: 1045.19 - Price: 0.07 
 * Date bought: 2018-01-01 - Current Date: 2018-03-22 00:00:00 +0000 UTC - Valuation: 371.56 - Price: 0.03 
 * Date bought: 2018-01-01 - Current Date: 2018-03-21 00:00:00 +0000 UTC - Valuation: 398.16 - Price: 0.03 
@@ -416,7 +418,7 @@
 * Date bought: 2018-01-01 - Current Date: 2018-01-02 00:00:00 +0000 UTC - Valuation: 1462.66 - Price: 0.10 
 * Date bought: 2018-01-01 - Current Date: 2018-01-01 00:00:00 +0000 UTC - Valuation: 1000.00 - Price: 0.07 
 ### bytom
-[chart](https://raw.githubusercontent.com/cryptocurrencyfund/data/develop/charts/portfolio/bytom.jpg)* Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 1031.95 - Price: 0.38 
+* Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 1031.95 - Price: 0.38 
 * Date bought: 2018-01-01 - Current Date: 2018-03-23 00:00:00 +0000 UTC - Valuation: 1045.92 - Price: 0.38 
 * Date bought: 2018-01-01 - Current Date: 2018-03-22 00:00:00 +0000 UTC - Valuation: 955.77 - Price: 0.35 
 * Date bought: 2018-01-01 - Current Date: 2018-03-21 00:00:00 +0000 UTC - Valuation: 963.61 - Price: 0.35 

@@ -1,5 +1,7 @@
+[chart](https://raw.githubusercontent.com/cryptocurrencyfund/data/develop/charts/portfolio/utility.jpg)
+
 ### basic-attention-token
-[chart](https://raw.githubusercontent.com/cryptocurrencyfund/data/develop/charts/portfolio/basic-attention-token.jpg)* Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 452.10 - Price: 0.22 
+* Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 452.10 - Price: 0.22 
 * Date bought: 2018-01-01 - Current Date: 2018-03-23 00:00:00 +0000 UTC - Valuation: 445.46 - Price: 0.21 
 * Date bought: 2018-01-01 - Current Date: 2018-03-22 00:00:00 +0000 UTC - Valuation: 436.55 - Price: 0.21 
 * Date bought: 2018-01-01 - Current Date: 2018-03-21 00:00:00 +0000 UTC - Valuation: 437.66 - Price: 0.21 
@@ -83,7 +85,7 @@
 * Date bought: 2018-01-01 - Current Date: 2018-01-02 00:00:00 +0000 UTC - Valuation: 1184.40 - Price: 0.56 
 * Date bought: 2018-01-01 - Current Date: 2018-01-01 00:00:00 +0000 UTC - Valuation: 1000.00 - Price: 0.48 
 ### golem-network-tokens
-[chart](https://raw.githubusercontent.com/cryptocurrencyfund/data/develop/charts/portfolio/golem-network-tokens.jpg)* Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 261.41 - Price: 0.24 
+* Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 261.41 - Price: 0.24 
 * Date bought: 2018-01-01 - Current Date: 2018-03-23 00:00:00 +0000 UTC - Valuation: 266.89 - Price: 0.25 
 * Date bought: 2018-01-01 - Current Date: 2018-03-22 00:00:00 +0000 UTC - Valuation: 263.97 - Price: 0.25 
 * Date bought: 2018-01-01 - Current Date: 2018-03-21 00:00:00 +0000 UTC - Valuation: 269.28 - Price: 0.25 
@@ -167,7 +169,7 @@
 * Date bought: 2018-01-01 - Current Date: 2018-01-02 00:00:00 +0000 UTC - Valuation: 1169.49 - Price: 1.09 
 * Date bought: 2018-01-01 - Current Date: 2018-01-01 00:00:00 +0000 UTC - Valuation: 1000.00 - Price: 0.93 
 ### request-network
-[chart](https://raw.githubusercontent.com/cryptocurrencyfund/data/develop/charts/portfolio/request-network.jpg)* Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 282.25 - Price: 0.23 
+* Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 282.25 - Price: 0.23 
 * Date bought: 2018-01-01 - Current Date: 2018-03-23 00:00:00 +0000 UTC - Valuation: 256.79 - Price: 0.21 
 * Date bought: 2018-01-01 - Current Date: 2018-03-22 00:00:00 +0000 UTC - Valuation: 275.37 - Price: 0.23 
 * Date bought: 2018-01-01 - Current Date: 2018-03-21 00:00:00 +0000 UTC - Valuation: 292.72 - Price: 0.24 
@@ -251,7 +253,7 @@
 * Date bought: 2018-01-01 - Current Date: 2018-01-02 00:00:00 +0000 UTC - Valuation: 955.40 - Price: 0.78 
 * Date bought: 2018-01-01 - Current Date: 2018-01-01 00:00:00 +0000 UTC - Valuation: 1000.00 - Price: 0.82 
 ### funfair
-[chart](https://raw.githubusercontent.com/cryptocurrencyfund/data/develop/charts/portfolio/funfair.jpg)* Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 479.08 - Price: 0.04 
+* Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 479.08 - Price: 0.04 
 * Date bought: 2018-01-01 - Current Date: 2018-03-23 00:00:00 +0000 UTC - Valuation: 474.35 - Price: 0.04 
 * Date bought: 2018-01-01 - Current Date: 2018-03-22 00:00:00 +0000 UTC - Valuation: 459.30 - Price: 0.04 
 * Date bought: 2018-01-01 - Current Date: 2018-03-21 00:00:00 +0000 UTC - Valuation: 474.91 - Price: 0.04 

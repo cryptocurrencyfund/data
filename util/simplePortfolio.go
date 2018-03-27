@@ -76,7 +76,7 @@ func DrawPortfolioChart(investAmount float64, investDate string, portfolioName s
 		YValues: allValuations[0],
 	}
 	portfolioSeries := chart.TimeSeries{
-		Name: portfolio[0].Currency,
+		Name: "CASM",
 		Style: chart.Style{
 			Show:        true,
 			StrokeColor: chart.GetDefaultColor(1),

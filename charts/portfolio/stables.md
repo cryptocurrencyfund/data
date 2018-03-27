@@ -1,4 +1,4 @@
-**maker**
+### maker
 * Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 709.95 - Price: 688.72 
 * Date bought: 2018-01-01 - Current Date: 2018-03-23 00:00:00 +0000 UTC - Valuation: 728.28 - Price: 706.50 
 * Date bought: 2018-01-01 - Current Date: 2018-03-22 00:00:00 +0000 UTC - Valuation: 707.76 - Price: 686.59 
@@ -82,7 +82,7 @@
 * Date bought: 2018-01-01 - Current Date: 2018-01-03 00:00:00 +0000 UTC - Valuation: 1107.66 - Price: 1074.53 
 * Date bought: 2018-01-01 - Current Date: 2018-01-02 00:00:00 +0000 UTC - Valuation: 1095.85 - Price: 1063.07 
 * Date bought: 2018-01-01 - Current Date: 2018-01-01 00:00:00 +0000 UTC - Valuation: 1000.00 - Price: 970.09 
-**trust**
+### trust
 * Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 272.96 - Price: 0.20 
 * Date bought: 2018-01-01 - Current Date: 2018-03-23 00:00:00 +0000 UTC - Valuation: 266.75 - Price: 0.19 
 * Date bought: 2018-01-01 - Current Date: 2018-03-22 00:00:00 +0000 UTC - Valuation: 277.54 - Price: 0.20 
@@ -166,7 +166,7 @@
 * Date bought: 2018-01-01 - Current Date: 2018-01-03 00:00:00 +0000 UTC - Valuation: 1275.81 - Price: 0.93 
 * Date bought: 2018-01-01 - Current Date: 2018-01-02 00:00:00 +0000 UTC - Valuation: 1181.91 - Price: 0.86 
 * Date bought: 2018-01-01 - Current Date: 2018-01-01 00:00:00 +0000 UTC - Valuation: 1000.00 - Price: 0.73 
-**digixdao**
+### digixdao
 * Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 2116.07 - Price: 344.75 
 * Date bought: 2018-01-01 - Current Date: 2018-03-23 00:00:00 +0000 UTC - Valuation: 2165.97 - Price: 352.88 
 * Date bought: 2018-01-01 - Current Date: 2018-03-22 00:00:00 +0000 UTC - Valuation: 2198.13 - Price: 358.12 
@@ -250,7 +250,7 @@
 * Date bought: 2018-01-01 - Current Date: 2018-01-03 00:00:00 +0000 UTC - Valuation: 1111.04 - Price: 181.01 
 * Date bought: 2018-01-01 - Current Date: 2018-01-02 00:00:00 +0000 UTC - Valuation: 1075.50 - Price: 175.22 
 * Date bought: 2018-01-01 - Current Date: 2018-01-01 00:00:00 +0000 UTC - Valuation: 1000.00 - Price: 162.92 
-**dai**
+### dai
 * Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 1008.55 - Price: 1.00 
 * Date bought: 2018-01-01 - Current Date: 2018-03-23 00:00:00 +0000 UTC - Valuation: 1007.25 - Price: 1.00 
 * Date bought: 2018-01-01 - Current Date: 2018-03-22 00:00:00 +0000 UTC - Valuation: 1010.00 - Price: 1.00 
@@ -334,7 +334,7 @@
 * Date bought: 2018-01-01 - Current Date: 2018-01-03 00:00:00 +0000 UTC - Valuation: 1002.98 - Price: 0.99 
 * Date bought: 2018-01-01 - Current Date: 2018-01-02 00:00:00 +0000 UTC - Valuation: 997.75 - Price: 0.99 
 * Date bought: 2018-01-01 - Current Date: 2018-01-01 00:00:00 +0000 UTC - Valuation: 1000.00 - Price: 0.99 
-**tether**
+### tether
 * Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 1000.00 - Price: 1.01 
 * Date bought: 2018-01-01 - Current Date: 2018-03-23 00:00:00 +0000 UTC - Valuation: 980.43 - Price: 0.99 
 * Date bought: 2018-01-01 - Current Date: 2018-03-22 00:00:00 +0000 UTC - Valuation: 989.09 - Price: 1.00 

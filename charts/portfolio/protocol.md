@@ -1,4 +1,4 @@
-**ethereum**
+### ethereum
 * Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 681.35 - Price: 526.44 
 * Date bought: 2018-01-01 - Current Date: 2018-03-23 00:00:00 +0000 UTC - Valuation: 698.41 - Price: 539.62 
 * Date bought: 2018-01-01 - Current Date: 2018-03-22 00:00:00 +0000 UTC - Valuation: 698.51 - Price: 539.70 
@@ -82,7 +82,7 @@
 * Date bought: 2018-01-01 - Current Date: 2018-01-03 00:00:00 +0000 UTC - Valuation: 1246.01 - Price: 962.72 
 * Date bought: 2018-01-01 - Current Date: 2018-01-02 00:00:00 +0000 UTC - Valuation: 1144.70 - Price: 884.44 
 * Date bought: 2018-01-01 - Current Date: 2018-01-01 00:00:00 +0000 UTC - Valuation: 1000.00 - Price: 772.64 
-**omisego**
+### omisego
 * Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 574.24 - Price: 11.10 
 * Date bought: 2018-01-01 - Current Date: 2018-03-23 00:00:00 +0000 UTC - Valuation: 594.93 - Price: 11.50 
 * Date bought: 2018-01-01 - Current Date: 2018-03-22 00:00:00 +0000 UTC - Valuation: 598.55 - Price: 11.57 
@@ -166,7 +166,7 @@
 * Date bought: 2018-01-01 - Current Date: 2018-01-03 00:00:00 +0000 UTC - Valuation: 1062.60 - Price: 20.54 
 * Date bought: 2018-01-01 - Current Date: 2018-01-02 00:00:00 +0000 UTC - Valuation: 1050.18 - Price: 20.30 
 * Date bought: 2018-01-01 - Current Date: 2018-01-01 00:00:00 +0000 UTC - Valuation: 1000.00 - Price: 19.33 
-**stellar**
+### stellar
 * Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 490.45 - Price: 0.24 
 * Date bought: 2018-01-01 - Current Date: 2018-03-23 00:00:00 +0000 UTC - Valuation: 491.96 - Price: 0.24 
 * Date bought: 2018-01-01 - Current Date: 2018-03-22 00:00:00 +0000 UTC - Valuation: 506.68 - Price: 0.24 
@@ -250,7 +250,7 @@
 * Date bought: 2018-01-01 - Current Date: 2018-01-03 00:00:00 +0000 UTC - Valuation: 1867.11 - Price: 0.90 
 * Date bought: 2018-01-01 - Current Date: 2018-01-02 00:00:00 +0000 UTC - Valuation: 1176.58 - Price: 0.56 
 * Date bought: 2018-01-01 - Current Date: 2018-01-01 00:00:00 +0000 UTC - Valuation: 1000.00 - Price: 0.48 
-**neo**
+### neo
 * Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 833.93 - Price: 65.73 
 * Date bought: 2018-01-01 - Current Date: 2018-03-23 00:00:00 +0000 UTC - Valuation: 869.83 - Price: 68.56 
 * Date bought: 2018-01-01 - Current Date: 2018-03-22 00:00:00 +0000 UTC - Valuation: 883.53 - Price: 69.64 
@@ -334,7 +334,7 @@
 * Date bought: 2018-01-01 - Current Date: 2018-01-03 00:00:00 +0000 UTC - Valuation: 1339.25 - Price: 105.56 
 * Date bought: 2018-01-01 - Current Date: 2018-01-02 00:00:00 +0000 UTC - Valuation: 1146.03 - Price: 90.33 
 * Date bought: 2018-01-01 - Current Date: 2018-01-01 00:00:00 +0000 UTC - Valuation: 1000.00 - Price: 78.82 
-**icon**
+### icon
 * Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 590.91 - Price: 3.64 
 * Date bought: 2018-01-01 - Current Date: 2018-03-23 00:00:00 +0000 UTC - Valuation: 659.09 - Price: 4.06 
 * Date bought: 2018-01-01 - Current Date: 2018-03-22 00:00:00 +0000 UTC - Valuation: 582.79 - Price: 3.59 
@@ -418,7 +418,7 @@
 * Date bought: 2018-01-01 - Current Date: 2018-01-03 00:00:00 +0000 UTC - Valuation: 1191.56 - Price: 7.34 
 * Date bought: 2018-01-01 - Current Date: 2018-01-02 00:00:00 +0000 UTC - Valuation: 1053.57 - Price: 6.49 
 * Date bought: 2018-01-01 - Current Date: 2018-01-01 00:00:00 +0000 UTC - Valuation: 1000.00 - Price: 6.16 
-**zilliqa**
+### zilliqa
 * Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 391.54 - Price: 0.05 
 * Date bought: 2018-01-01 - Current Date: 2018-03-23 00:00:00 +0000 UTC - Valuation: 385.71 - Price: 0.05 
 * Date bought: 2018-01-01 - Current Date: 2018-03-22 00:00:00 +0000 UTC - Valuation: 349.54 - Price: 0.05 
@@ -478,7 +478,7 @@
 * Date bought: 2018-01-01 - Current Date: 2018-01-27 00:00:00 +0000 UTC - Valuation: 742.26 - Price: 0.10 
 * Date bought: 2018-01-01 - Current Date: 2018-01-26 00:00:00 +0000 UTC - Valuation: 877.51 - Price: 0.12 
 * Date bought: 2018-01-01 - Current Date: 2018-01-25 00:00:00 +0000 UTC - Valuation: 1000.00 - Price: 0.14 
-**trinity-network-credit**
+### trinity-network-credit
 * Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 410.78 - Price: 0.11 
 * Date bought: 2018-01-01 - Current Date: 2018-03-23 00:00:00 +0000 UTC - Valuation: 399.49 - Price: 0.11 
 * Date bought: 2018-01-01 - Current Date: 2018-03-22 00:00:00 +0000 UTC - Valuation: 413.98 - Price: 0.11 

@@ -165,7 +165,7 @@ func DrawPortfolioComparisonChart(investAmount float64, investDate string, compa
 	// Print:
 	logToFile := ""
 	for c := 0; c < len(currencies); c++ {
-		logToFile += "**" + currencies[c] + "**\n"
+		logToFile += "### " + currencies[c] + "\n"
 		fmt.Println("[" + currencies[c] + "]")
 		for k, v := range allTs[c] {
 			current := fmt.Sprintf("Date bought: %s - Current Date: %s - Valuation: %.2f - Price: %.2f \n",

@@ -66,18 +66,26 @@ func DrawPortfolioChart(investAmount float64, investDate string, portfolioName s
 
 	var allValuationSeries []chart.Series
 
-	for k, v := range allTs {
-		series := chart.TimeSeries{
-			Name: portfolio[k].Currency,
-			Style: chart.Style{
-				Show:        true,
-				StrokeColor: chart.GetDefaultColor(k),
-			},
-			XValues: v,
-			YValues: compoundValuations,
-		}
-		allValuationSeries = append(allValuationSeries, series)
+	baseSeries := chart.TimeSeries{
+		Name: portfolio[0].Currency,
+		Style: chart.Style{
+			Show:        true,
+			StrokeColor: chart.GetDefaultColor(0),
+		},
+		XValues: allTs[0],
+		YValues: allValuations[0],
 	}
+	portfolioSeries := chart.TimeSeries{
+		Name: portfolio[0].Currency,
+		Style: chart.Style{
+			Show:        true,
+			StrokeColor: chart.GetDefaultColor(1),
+		},
+		XValues: allTs[0],
+		YValues: compoundValuations,
+	}
+	allValuationSeries = append(allValuationSeries, baseSeries)
+	allValuationSeries = append(allValuationSeries, portfolioSeries)
 
 	graph := chart.Chart{
 		XAxis: chart.XAxis{

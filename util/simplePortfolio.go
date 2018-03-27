@@ -50,6 +50,8 @@ func DrawPortfolioChart(investAmount float64, investDate string, portfolioName s
 
 	// Print:
 	logToFile := "![chart](https://raw.githubusercontent.com/cryptocurrencyfund/data/develop/charts/portfolio/" + portfolioName + ".jpg)\n\n"
+	logToFile += "## Strategy: \n"
+	logToFile += fmt.Sprintf("%v\n", portfolio)
 	for c := 0; c < len(portfolio); c++ {
 		logToFile += "### " + portfolio[c].Currency + "\n"
 		fmt.Println("[" + portfolio[c].Currency + "]")

@@ -1,5 +1,7 @@
 ![chart](https://raw.githubusercontent.com/cryptocurrencyfund/data/develop/charts/portfolio/casm.jpg)
 
+## Strategy: 
+[{bitcoin 0.3} {ethereum 0.3} {litecoin 0.2} {binance-coin 0.2}]
 ### bitcoin
 * Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 190.41 - Price: 8668.12 
 * Date bought: 2018-01-01 - Current Date: 2018-03-23 00:00:00 +0000 UTC - Valuation: 195.05 - Price: 8879.62 

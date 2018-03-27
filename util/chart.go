@@ -140,8 +140,8 @@ func DrawComparisonChart(currencies ...string) {
 	outputFile.Close()
 }
 
-// DrawPortfolioComparisonChart DrawPortfolioComparisonChart
-func DrawPortfolioComparisonChart(investAmount float64, investDate string, comparisonName string, currencies ...string) {
+// DrawThemeChart DrawThemeChart
+func DrawThemeChart(investAmount float64, investDate string, comparisonName string, currencies ...string) {
 
 	var allTs [][]time.Time
 	var allPrices [][]float64
@@ -163,7 +163,7 @@ func DrawPortfolioComparisonChart(investAmount float64, investDate string, compa
 	}
 
 	// Print:
-	logToFile := "![chart](https://raw.githubusercontent.com/cryptocurrencyfund/data/develop/charts/portfolio/" + comparisonName + ".jpg)\n\n"
+	logToFile := "![chart](https://raw.githubusercontent.com/cryptocurrencyfund/data/develop/charts/theme/" + comparisonName + ".jpg)\n\n"
 	for c := 0; c < len(currencies); c++ {
 		logToFile += "### " + currencies[c] + "\n"
 		fmt.Println("[" + currencies[c] + "]")
@@ -222,8 +222,8 @@ func DrawPortfolioComparisonChart(investAmount float64, investDate string, compa
 		log.Fatal(err)
 	}
 
-	outputImage, err := os.Create("charts/portfolio/" + comparisonName + ".jpg")
-	outputFile, _ := os.Create("charts/portfolio/" + comparisonName + ".md")
+	outputImage, err := os.Create("charts/theme/" + comparisonName + ".jpg")
+	outputFile, _ := os.Create("charts/theme/" + comparisonName + ".md")
 	if err != nil {
 		// Handle error
 	}

@@ -14,12 +14,18 @@ import (
 const topCount = 300
 
 func usage() {
-	fmt.Println("\n\n========== Help ==========")
-	fmt.Println("all: get data, output to json/csv, generate report all in one, push to github")
+	fmt.Println("\n\n[HELP]")
+	fmt.Println("\n\n========== Data ==========")
 	fmt.Println("history: fetch all historical prices for top X number of coins")
 	fmt.Println("currencyHistory: fetch historical prices for a specific currency")
 	fmt.Println("coinInfo: fetch coin information for a specific currency")
 	fmt.Println("allCoinInfo: fetch coin information for all currencies")
+	fmt.Println("\n========== Charts ==========")
+	fmt.Println("currencyCharts: currency charts with price/market cap")
+	fmt.Println("comparisonCharts: comparing 2+ currencies charts")
+	fmt.Println("themeCharts: theme-based charts")
+	fmt.Println("\n========== Cron Jobs ==========")
+	fmt.Println("all: get data, output to json/csv, generate report all in one, push to github")
 	fmt.Println("json: 24 hour job to fetch data and save as json")
 	fmt.Println("csv: 24 hour job to fetch data and save as csv")
 	fmt.Println("report: 24 hour job to generate a daily report")
@@ -65,14 +71,14 @@ func main() {
 			dailyReport()
 			time.Sleep(time.Duration(24) * time.Hour)
 		}
-	case "allCurrencyCharts":
-		allCurrencyCharts()
+	case "currencyCharts":
+		currencyCharts()
 		break
 	case "comparisonCharts":
 		comparisonCharts()
 		break
-	case "portfolioCharts":
-		portfolioCharts()
+	case "themeCharts":
+		themeCharts()
 		break
 	case "db":
 		seconds := 5
@@ -173,7 +179,7 @@ func getCoin(coinName string, detailed bool) {
 	}
 }
 
-func allCurrencyCharts() {
+func currencyCharts() {
 	priceMap := util.GetHistoricalPrices()
 	for k := range priceMap {
 		currency := k
@@ -187,11 +193,11 @@ func comparisonCharts() {
 	util.DrawComparisonChart(c1, c2)
 }
 
-func portfolioCharts() {
-	util.DrawPortfolioComparisonChart(1000.00, "2018-01-01", "large_cap", "bitcoin", "ethereum", "ripple", "litecoin", "bitcoin-cash", "zcash", "monero")
-	util.DrawPortfolioComparisonChart(1000.00, "2018-01-01", "protocol", "ethereum", "omisego", "stellar", "neo", "icon", "zilliqa", "trinity-network-credit", "raiden-network-token")
-	util.DrawPortfolioComparisonChart(1000.00, "2018-01-01", "exchanges", "binance-coin", "augur", "gnosis-gno", "0x", "kyber-network", "bancor", "airswap", "republic-protocol")
-	util.DrawPortfolioComparisonChart(1000.00, "2018-01-01", "stables", "maker", "trust", "digixdao", "dai", "tether")
-	util.DrawPortfolioComparisonChart(1000.00, "2018-01-01", "utility", "basic-attention-token", "golem-network-tokens", "request-network", "funfair", "quantstamp")
-	util.DrawPortfolioComparisonChart(1000.00, "2018-01-01", "asia", "neo", "tron", "trinity-network-credit", "icon", "ontology", "storm", "bytom")
+func themeCharts() {
+	util.DrawThemeChart(1000.00, "2018-01-01", "large_cap", "bitcoin", "ethereum", "ripple", "litecoin", "bitcoin-cash", "zcash", "monero")
+	util.DrawThemeChart(1000.00, "2018-01-01", "protocol", "ethereum", "omisego", "stellar", "neo", "icon", "zilliqa", "trinity-network-credit", "raiden-network-token")
+	util.DrawThemeChart(1000.00, "2018-01-01", "exchanges", "binance-coin", "augur", "gnosis-gno", "0x", "kyber-network", "bancor", "airswap", "republic-protocol")
+	util.DrawThemeChart(1000.00, "2018-01-01", "stables", "maker", "trust", "digixdao", "dai", "tether")
+	util.DrawThemeChart(1000.00, "2018-01-01", "utility", "basic-attention-token", "golem-network-tokens", "request-network", "funfair", "quantstamp")
+	util.DrawThemeChart(1000.00, "2018-01-01", "asia", "neo", "tron", "trinity-network-credit", "icon", "ontology", "storm", "bytom")
 }

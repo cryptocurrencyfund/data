@@ -174,8 +174,6 @@ func getCoin(coinName string, detailed bool) {
 }
 
 func allCurrencyCharts() {
-	// http.HandleFunc("/", util.DrawChart)
-	// http.ListenAndServe(":8080", nil)
 	priceMap := util.GetHistoricalPrices()
 	for k := range priceMap {
 		currency := k

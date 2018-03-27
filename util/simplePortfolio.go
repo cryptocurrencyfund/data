@@ -66,6 +66,11 @@ func DrawPortfolioChart(investAmount float64, investDate string, portfolioName s
 
 	var allValuationSeries []chart.Series
 
+	var baseCoinValuations []float64
+	for _, v := range allValuations[0] {
+		baseCoinValuations = append(baseCoinValuations, v/portfolio[0].Weight)
+	}
+
 	baseSeries := chart.TimeSeries{
 		Name: portfolio[0].Currency,
 		Style: chart.Style{
@@ -73,7 +78,7 @@ func DrawPortfolioChart(investAmount float64, investDate string, portfolioName s
 			StrokeColor: chart.GetDefaultColor(0),
 		},
 		XValues: allTs[0],
-		YValues: allValuations[0],
+		YValues: baseCoinValuations,
 	}
 	portfolioSeries := chart.TimeSeries{
 		Name: "CASM",

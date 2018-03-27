@@ -53,9 +53,9 @@ func DrawPortfolioChart(investAmount float64, investDate string, portfolioName s
 	for c := 0; c < len(portfolio); c++ {
 		logToFile += "### " + portfolio[c].Currency + "\n"
 		fmt.Println("[" + portfolio[c].Currency + "]")
-		for _, v := range allTs[c] {
-			current := fmt.Sprintf("Date bought: %s - Current Date: %s - Valuation: %.2f",
-				investDate, v.String(), allValuations[c])
+		for k, v := range allTs[c] {
+			current := fmt.Sprintf("Date bought: %s - Current Date: %s - Valuation: %.2f - Price: %.2f \n",
+				investDate, v.String(), allValuations[c][k], allPrices[c][k])
 			logToFile += "* " + current
 			fmt.Print(current)
 		}

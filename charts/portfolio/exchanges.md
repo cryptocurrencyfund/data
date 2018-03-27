@@ -1,4 +1,4 @@
-[chart](https://raw.githubusercontent.com/cryptocurrencyfund/data/develop/charts/portfolio/exchanges.jpg)
+![chart](https://raw.githubusercontent.com/cryptocurrencyfund/data/develop/charts/portfolio/exchanges.jpg)
 
 ### binance-coin
 * Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 1556.48 - Price: 13.09 

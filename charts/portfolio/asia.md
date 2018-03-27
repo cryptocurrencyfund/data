@@ -1,4 +1,4 @@
-[chart](https://raw.githubusercontent.com/cryptocurrencyfund/data/develop/charts/portfolio/asia.jpg)
+![chart](https://raw.githubusercontent.com/cryptocurrencyfund/data/develop/charts/portfolio/asia.jpg)
 
 ### neo
 * Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 833.93 - Price: 65.73 

@@ -163,7 +163,7 @@ func DrawPortfolioComparisonChart(investAmount float64, investDate string, compa
 	}
 
 	// Print:
-	logToFile := "[chart](https://raw.githubusercontent.com/cryptocurrencyfund/data/develop/charts/portfolio/" + comparisonName + ".jpg)\n\n"
+	logToFile := "![chart](https://raw.githubusercontent.com/cryptocurrencyfund/data/develop/charts/portfolio/" + comparisonName + ".jpg)\n\n"
 	for c := 0; c < len(currencies); c++ {
 		logToFile += "### " + currencies[c] + "\n"
 		fmt.Println("[" + currencies[c] + "]")

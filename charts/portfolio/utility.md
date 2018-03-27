@@ -1,4 +1,4 @@
-[chart](https://raw.githubusercontent.com/cryptocurrencyfund/data/develop/charts/portfolio/utility.jpg)
+![chart](https://raw.githubusercontent.com/cryptocurrencyfund/data/develop/charts/portfolio/utility.jpg)
 
 ### basic-attention-token
 * Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 452.10 - Price: 0.22 

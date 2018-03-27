@@ -201,6 +201,12 @@ func DrawPortfolioComparisonChart(investAmount float64, investDate string, compa
 			Name:  "Price ($)",
 			Style: chart.Style{Show: true},
 		},
+		Background: chart.Style{
+			Padding: chart.Box{
+				Top:  20,
+				Left: 40,
+			},
+		},
 		Series: allValuationSeries,
 	}
 

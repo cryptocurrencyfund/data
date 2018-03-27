@@ -193,5 +193,5 @@ func portfolioCharts() {
 	util.DrawPortfolioComparisonChart(1000.00, "2018-01-01", "exchanges", "binance-coin", "augur", "gnosis-gno", "0x", "kyber-network", "bancor", "airswap", "republic-protocol")
 	util.DrawPortfolioComparisonChart(1000.00, "2018-01-01", "stables", "maker", "trust", "digixdao", "dai", "tether")
 	util.DrawPortfolioComparisonChart(1000.00, "2018-01-01", "utility", "basic-attention-token", "golem-network-tokens", "request-network", "funfair")
-	util.DrawPortfolioComparisonChart(1000.00, "2018-01-01", "asia", "neo", "tron", "trinity-network-credit", "aeternity", "icon")
+	util.DrawPortfolioComparisonChart(1000.00, "2018-01-01", "asia", "neo", "tron", "trinity-network-credit", "icon", "ontology", "storm", "bytom")
 }

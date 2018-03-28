@@ -140,8 +140,8 @@ func DrawComparisonChart(currencies ...string) {
 	outputFile.Close()
 }
 
-// DrawPortfolioComparisonChart DrawPortfolioComparisonChart
-func DrawPortfolioComparisonChart(investAmount float64, investDate string, currencies ...string) {
+// DrawThemeChart DrawThemeChart
+func DrawThemeChart(investAmount float64, investDate string, comparisonName string, currencies ...string) {
 
 	var allTs [][]time.Time
 	var allPrices [][]float64
@@ -163,11 +163,15 @@ func DrawPortfolioComparisonChart(investAmount float64, investDate string, curre
 	}
 
 	// Print:
+	logToFile := "![chart](https://raw.githubusercontent.com/cryptocurrencyfund/data/develop/charts/theme/" + comparisonName + ".jpg)\n\n"
 	for c := 0; c < len(currencies); c++ {
+		logToFile += "### " + currencies[c] + "\n"
 		fmt.Println("[" + currencies[c] + "]")
 		for k, v := range allTs[c] {
-			fmt.Printf("Date bought: %s - Current Date: %s - Valuation: %.2f - Price: %.2f \n",
+			current := fmt.Sprintf("Date bought: %s - Current Date: %s - Valuation: %.2f - Price: %.2f \n",
 				investDate, v.String(), allValuations[c][k], allPrices[c][k])
+			logToFile += "* " + current
+			fmt.Print(current)
 		}
 
 	}
@@ -197,11 +201,17 @@ func DrawPortfolioComparisonChart(investAmount float64, investDate string, curre
 			Name:  "Price ($)",
 			Style: chart.Style{Show: true},
 		},
+		Background: chart.Style{
+			Padding: chart.Box{
+				Top:  20,
+				Left: 40,
+			},
+		},
 		Series: allValuationSeries,
 	}
 
 	graph.Elements = []chart.Renderable{
-		chart.Legend(&graph),
+		chart.LegendLeft(&graph),
 	}
 
 	collector := &chart.ImageWriter{}
@@ -212,12 +222,14 @@ func DrawPortfolioComparisonChart(investAmount float64, investDate string, curre
 		log.Fatal(err)
 	}
 
-	outputFile, err := os.Create("charts/portfolio/" + currencies[0] + ".jpg")
+	outputImage, err := os.Create("charts/theme/" + comparisonName + ".jpg")
+	outputFile, _ := os.Create("charts/theme/" + comparisonName + ".md")
 	if err != nil {
 		// Handle error
 	}
-	png.Encode(outputFile, image)
-
+	png.Encode(outputImage, image)
+	outputFile.WriteString(logToFile)
+	outputImage.Close()
 	outputFile.Close()
 }
 

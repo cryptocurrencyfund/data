@@ -251,4 +251,63 @@ func portfolioCharts() {
 	}
 	util.DrawPortfolioChart(1000.00, "2018-01-01", "casm2", portfolio)
 
+	portfolio = []util.DumbPortfolio{
+		util.DumbPortfolio{
+			Currency: "neo",
+			Weight:   0.2,
+		},
+		util.DumbPortfolio{
+			Currency: "tron",
+			Weight:   0.2,
+		},
+		util.DumbPortfolio{
+			Currency: "vechain",
+			Weight:   0.2,
+		},
+		util.DumbPortfolio{
+			Currency: "storm",
+			Weight:   0.2,
+		},
+		util.DumbPortfolio{
+			Currency: "nebulas-token",
+			Weight:   0.2,
+		},
+	}
+	util.DrawPortfolioChart(1000.00, "2018-01-01", "china", portfolio)
+
+	portfolio = []util.DumbPortfolio{
+		util.DumbPortfolio{
+			Currency: "binance-coin",
+			Weight:   1 / 8,
+		},
+		util.DumbPortfolio{
+			Currency: "augur",
+			Weight:   1 / 8,
+		},
+		util.DumbPortfolio{
+			Currency: "gnosis-gno",
+			Weight:   1 / 8,
+		},
+		util.DumbPortfolio{
+			Currency: "0x",
+			Weight:   1 / 8,
+		},
+		util.DumbPortfolio{
+			Currency: "kyber-network",
+			Weight:   1 / 8,
+		},
+		util.DumbPortfolio{
+			Currency: "bancor",
+			Weight:   1 / 8,
+		},
+		util.DumbPortfolio{
+			Currency: "airswap",
+			Weight:   1 / 8,
+		},
+		util.DumbPortfolio{
+			Currency: "republic-protocol",
+			Weight:   1 / 8,
+		},
+	}
+	util.DrawPortfolioChart(1000.00, "2018-01-01", "exchange", portfolio)
 }

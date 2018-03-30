@@ -1,6 +1,8 @@
 ![chart](https://raw.githubusercontent.com/cryptocurrencyfund/data/develop/charts/theme/exchanges.jpg)
 
 ### binance-coin
+* Date bought: 2018-01-01 - Current Date: 2018-03-26 00:00:00 +0000 UTC - Valuation: 1434.01 - Price: 12.06 
+* Date bought: 2018-01-01 - Current Date: 2018-03-25 00:00:00 +0000 UTC - Valuation: 1519.62 - Price: 12.78 
 * Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 1556.48 - Price: 13.09 
 * Date bought: 2018-01-01 - Current Date: 2018-03-23 00:00:00 +0000 UTC - Valuation: 1395.96 - Price: 11.74 
 * Date bought: 2018-01-01 - Current Date: 2018-03-22 00:00:00 +0000 UTC - Valuation: 1197.38 - Price: 10.07 
@@ -85,6 +87,8 @@
 * Date bought: 2018-01-01 - Current Date: 2018-01-02 00:00:00 +0000 UTC - Valuation: 1051.13 - Price: 8.84 
 * Date bought: 2018-01-01 - Current Date: 2018-01-01 00:00:00 +0000 UTC - Valuation: 1000.00 - Price: 8.41 
 ### augur
+* Date bought: 2018-01-01 - Current Date: 2018-03-26 00:00:00 +0000 UTC - Valuation: 462.67 - Price: 34.46 
+* Date bought: 2018-01-01 - Current Date: 2018-03-25 00:00:00 +0000 UTC - Valuation: 459.59 - Price: 34.23 
 * Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 466.57 - Price: 34.75 
 * Date bought: 2018-01-01 - Current Date: 2018-03-23 00:00:00 +0000 UTC - Valuation: 472.48 - Price: 35.19 
 * Date bought: 2018-01-01 - Current Date: 2018-03-22 00:00:00 +0000 UTC - Valuation: 472.48 - Price: 35.19 
@@ -169,6 +173,8 @@
 * Date bought: 2018-01-01 - Current Date: 2018-01-02 00:00:00 +0000 UTC - Valuation: 1067.00 - Price: 79.47 
 * Date bought: 2018-01-01 - Current Date: 2018-01-01 00:00:00 +0000 UTC - Valuation: 1000.00 - Price: 74.48 
 ### gnosis-gno
+* Date bought: 2018-01-01 - Current Date: 2018-03-26 00:00:00 +0000 UTC - Valuation: 329.81 - Price: 74.89 
+* Date bought: 2018-01-01 - Current Date: 2018-03-25 00:00:00 +0000 UTC - Valuation: 354.38 - Price: 80.47 
 * Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 345.71 - Price: 78.50 
 * Date bought: 2018-01-01 - Current Date: 2018-03-23 00:00:00 +0000 UTC - Valuation: 357.55 - Price: 81.19 
 * Date bought: 2018-01-01 - Current Date: 2018-03-22 00:00:00 +0000 UTC - Valuation: 373.85 - Price: 84.89 
@@ -253,6 +259,8 @@
 * Date bought: 2018-01-01 - Current Date: 2018-01-02 00:00:00 +0000 UTC - Valuation: 1182.94 - Price: 268.61 
 * Date bought: 2018-01-01 - Current Date: 2018-01-01 00:00:00 +0000 UTC - Valuation: 1000.00 - Price: 227.07 
 ### 0x
+* Date bought: 2018-01-01 - Current Date: 2018-03-26 00:00:00 +0000 UTC - Valuation: 750.96 - Price: 0.66 
+* Date bought: 2018-01-01 - Current Date: 2018-03-25 00:00:00 +0000 UTC - Valuation: 678.45 - Price: 0.60 
 * Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 681.20 - Price: 0.60 
 * Date bought: 2018-01-01 - Current Date: 2018-03-23 00:00:00 +0000 UTC - Valuation: 631.48 - Price: 0.55 
 * Date bought: 2018-01-01 - Current Date: 2018-03-22 00:00:00 +0000 UTC - Valuation: 659.00 - Price: 0.58 
@@ -337,6 +345,8 @@
 * Date bought: 2018-01-01 - Current Date: 2018-01-02 00:00:00 +0000 UTC - Valuation: 1021.60 - Price: 0.90 
 * Date bought: 2018-01-01 - Current Date: 2018-01-01 00:00:00 +0000 UTC - Valuation: 1000.00 - Price: 0.88 
 ### kyber-network
+* Date bought: 2018-01-01 - Current Date: 2018-03-26 00:00:00 +0000 UTC - Valuation: 401.96 - Price: 1.23 
+* Date bought: 2018-01-01 - Current Date: 2018-03-25 00:00:00 +0000 UTC - Valuation: 450.98 - Price: 1.38 
 * Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 470.59 - Price: 1.44 
 * Date bought: 2018-01-01 - Current Date: 2018-03-23 00:00:00 +0000 UTC - Valuation: 441.18 - Price: 1.35 
 * Date bought: 2018-01-01 - Current Date: 2018-03-22 00:00:00 +0000 UTC - Valuation: 421.57 - Price: 1.29 
@@ -421,6 +431,8 @@
 * Date bought: 2018-01-01 - Current Date: 2018-01-02 00:00:00 +0000 UTC - Valuation: 1117.65 - Price: 3.42 
 * Date bought: 2018-01-01 - Current Date: 2018-01-01 00:00:00 +0000 UTC - Valuation: 1000.00 - Price: 3.06 
 ### bancor
+* Date bought: 2018-01-01 - Current Date: 2018-03-26 00:00:00 +0000 UTC - Valuation: 507.46 - Price: 2.72 
+* Date bought: 2018-01-01 - Current Date: 2018-03-25 00:00:00 +0000 UTC - Valuation: 550.37 - Price: 2.95 
 * Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 555.97 - Price: 2.98 
 * Date bought: 2018-01-01 - Current Date: 2018-03-23 00:00:00 +0000 UTC - Valuation: 569.03 - Price: 3.05 
 * Date bought: 2018-01-01 - Current Date: 2018-03-22 00:00:00 +0000 UTC - Valuation: 559.70 - Price: 3.00 
@@ -505,6 +517,8 @@
 * Date bought: 2018-01-01 - Current Date: 2018-01-02 00:00:00 +0000 UTC - Valuation: 1121.27 - Price: 6.01 
 * Date bought: 2018-01-01 - Current Date: 2018-01-01 00:00:00 +0000 UTC - Valuation: 1000.00 - Price: 5.36 
 ### airswap
+* Date bought: 2018-01-01 - Current Date: 2018-03-26 00:00:00 +0000 UTC - Valuation: 513.27 - Price: 0.30 
+* Date bought: 2018-01-01 - Current Date: 2018-03-25 00:00:00 +0000 UTC - Valuation: 534.96 - Price: 0.31 
 * Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 535.35 - Price: 0.31 
 * Date bought: 2018-01-01 - Current Date: 2018-03-23 00:00:00 +0000 UTC - Valuation: 482.14 - Price: 0.28 
 * Date bought: 2018-01-01 - Current Date: 2018-03-22 00:00:00 +0000 UTC - Valuation: 508.01 - Price: 0.30 
@@ -589,6 +603,8 @@
 * Date bought: 2018-01-01 - Current Date: 2018-01-02 00:00:00 +0000 UTC - Valuation: 944.07 - Price: 0.55 
 * Date bought: 2018-01-01 - Current Date: 2018-01-01 00:00:00 +0000 UTC - Valuation: 1000.00 - Price: 0.59 
 ### republic-protocol
+* Date bought: 2018-01-01 - Current Date: 2018-03-26 00:00:00 +0000 UTC - Valuation: 501.06 - Price: 0.04 
+* Date bought: 2018-01-01 - Current Date: 2018-03-25 00:00:00 +0000 UTC - Valuation: 525.83 - Price: 0.04 
 * Date bought: 2018-01-01 - Current Date: 2018-03-24 00:00:00 +0000 UTC - Valuation: 545.17 - Price: 0.05 
 * Date bought: 2018-01-01 - Current Date: 2018-03-23 00:00:00 +0000 UTC - Valuation: 560.13 - Price: 0.05 
 * Date bought: 2018-01-01 - Current Date: 2018-03-22 00:00:00 +0000 UTC - Valuation: 592.40 - Price: 0.05 
